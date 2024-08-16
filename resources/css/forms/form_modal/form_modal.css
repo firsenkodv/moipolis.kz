@@ -1,0 +1,36 @@
+.F_form {
+  padding: 0 !important;
+  border-radius: 12px !important;
+  min-width: 600px; }
+  .F_form .F_form__body {
+    padding: 24px; }
+
+.F_form__left {
+  padding: 0 0 24px 0; }
+
+.F_form_gr-app {
+  max-width: 422px;
+  min-width: 422px; }
+  .F_form_gr-app .F_form__body {
+    padding: 0 !important; }
+
+/*  */
+.F_responce {
+  background: #ffffff;
+  border-radius: 12px;
+  display: none; }
+  .F_responce .af-message {
+    text-align: center;
+    padding: 24px; }
+  .F_responce .font_24 {
+    font-size: 24px;
+    padding: 0 0 20px 0; }
+  .F_responce .ccent {
+    padding: 20px; }
+
+._r_field span {
+  color: #EF533F;
+  padding: 9px 0;
+  display: block; }
+
+/*# sourceMappingURL=form_modal.css.map */

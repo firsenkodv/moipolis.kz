@@ -1,0 +1,27 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0",
+        "vite": "^5.0"
+    },
+    "dependencies": {
+        "@fancyapps/ui": "^5.0.36",
+        "@fontsource-variable/inter": "^5.0.19",
+        "@fontsource-variable/roboto-flex": "^5.0.15",
+        "@fontsource/source-sans-pro": "^5.0.8",
+        "chosen-js": "^1.8.7",
+        "ckeditor5": "^43.0.0",
+        "imask": "^7.6.1",
+        "jquery": "^3.7.1",
+        "jquery-ui": "^1.14.0",
+        "moment": "^2.30.1",
+        "sass": "^1.77.8",
+        "slick-carousel": "^1.8.1"
+    }
+}

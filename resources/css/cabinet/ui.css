@@ -1,0 +1,38 @@
+.ui-widget {
+  font-family: 'Roboto Flex Variable', sans-serif !important;
+  font-size: 1em; }
+
+.ui-widget-header {
+  background: #EF533F !important;
+  border: 0 !important; }
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 45%;
+  font-weight: 100 !important;
+  font-size: 14px !important; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid #EF533F;
+  background: #EF533F;
+  font-weight: normal;
+  color: #fff; }
+
+.ui-datepicker td span, .ui-datepicker td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none;
+  font-weight: 300 !important;
+  color: #000; }
+
+.ui-datepicker-week-end span {
+  color: #EF533F; }
+
+.ui-widget.ui-widget-content {
+  border: 1px solid #dddddd !important; }
+
+.ui-datepicker-prev-hover,
+.ui-datepicker-next-hover {
+  background: #EF533F !important; }
+
+/*# sourceMappingURL=ui.css.map */
