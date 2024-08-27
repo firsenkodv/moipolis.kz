@@ -21,7 +21,7 @@
                                 <h3 class="F_h1">Страхование имущества для Физ. лиц</h3>
                             </div>
                             </div>
-                            <div class="c_r__company_flex color_grey ">
+                            <div class="c_r__company_flex c_r__company_flex__label color_grey ">
                                 <div class="c_r__flex_1">
                                     <div class="td">Страховая компания</div>
                                 </div>

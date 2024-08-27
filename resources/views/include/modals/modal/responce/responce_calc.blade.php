@@ -10,7 +10,7 @@
                 <div class="class__info">
                     <div class="flashMassege__relative">
                         Вы зарегистрированы на сайте Центра Страхования «General Re», ваш полис появится у вас в личном кабинете.
-                        <a href="#">Перейти в раздел с полисами.</a>
+                        <a href="{{ route('cabinet.policy') }}">Перейти в раздел с полисами.</a>
                     </div>
                 </div>
             </div>

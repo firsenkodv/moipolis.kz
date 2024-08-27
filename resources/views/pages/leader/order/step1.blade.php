@@ -44,8 +44,6 @@
                                 </div>
                             @endif
                         </div>
-
-
                     </div>
                     @endif
 
@@ -64,9 +62,8 @@
                                             href="#modal_login" data-fancybox >воити</a>.</span></div>
                             @endif
                         </div>
-                        <div class="formCabinet">
+                        <div class="formCabinet calc_form">
                             <x-forms.auth-calc-form
-
                                 method="POST"
                                 action="{{  $action }}"
                             >

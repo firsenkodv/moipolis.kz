@@ -554,7 +554,9 @@ h1.h1 {
         border-radius: 16px;
         width: 310px !important;
         height: 391px;
-        margin: 0 12px;
+        margin: 0 12px !important;
+        background-color: rgba(131, 35, 28, 0.04);
+        display: block !important;
     }
 
     .p_item__img {
@@ -622,7 +624,7 @@ h1.h1 {
 
 .p_item_last {
     width: 310px !important;
-    background: $colorRed;
+    background: $colorRed !important;
     color: #fff;
 
     .h2__title {

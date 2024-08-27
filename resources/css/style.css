@@ -365,7 +365,9 @@ h1.h1 {
     border-radius: 16px;
     width: 310px !important;
     height: 391px;
-    margin: 0 12px; }
+    margin: 0 12px !important;
+    background-color: rgba(131, 35, 28, 0.04);
+    display: block !important; }
   .partners .p_item__img {
     padding: 10px 0; }
   .partners .p_options {
@@ -410,7 +412,7 @@ h1.h1 {
 
 .p_item_last {
   width: 310px !important;
-  background: #EF533F;
+  background: #EF533F !important;
   color: #fff; }
   .p_item_last .h2__title {
     color: #fff; }

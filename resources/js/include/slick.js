@@ -15,7 +15,7 @@ export function slick() {
     $('.slick_slider__partners').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         speed: 700,
        /* autoplay: true,*/
         autoplaySpeed: 5000,
@@ -25,7 +25,7 @@ export function slick() {
                 breakpoint: 1140,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             }
 

@@ -7,7 +7,10 @@
     padding-right: 15px; }
 
   .home_section__slider .h_sl__flex .h_sl__left {
-    font-size: calc(20px + 32 * ((100vw - 320px) / 1120)); } }
+    font-size: calc(20px + 32 * ((100vw - 320px) / 1120)); }
+
+  .c_r__company_flex .c_r__title {
+    font-size: calc(15px + 3 * ((100vw - 320px) / 1120)); } }
 @media screen and (max-width: 1498px) {
   .home_section__slider .h_sl__flex .h_sl__right .h_sl_right__top .h_sl_right__item {
     display: flex;
@@ -54,6 +57,24 @@
     height: 391px;
     margin: 0 10px; } }
 @media screen and (max-width: 1216px) {
+  .c_r__company_flex .c_r__price {
+    min-width: 140px;
+    max-width: 140px;
+    font-size: 14px; }
+  .c_r__company_flex .c_r__month {
+    width: auto;
+    min-width: 90px;
+    font-size: 14px; }
+  .c_r__company_flex .c_r__button {
+    min-width: 90px;
+    width: auto;
+    height: 100%; }
+  .c_r__company_flex .c_r__title {
+    font-size: calc(13px + 3 * ((100vw - 320px) / 1120)); }
+
+  .left_menu ul li a {
+    font-size: 15px; }
+
   .partners .partner__item {
     padding: 16px;
     width: 260px !important;
@@ -105,6 +126,52 @@
   .f_flextop .f_flextop__left .fl_2 .f3 {
     width: 60%; } }
 @media screen and (max-width: 1140px) {
+  .c_r__company_flex {
+    display: block; }
+    .c_r__company_flex .c_r__flex_1 {
+      width: 100%;
+      min-height: 72px;
+      justify-content: start;
+      align-items: center; }
+      .c_r__company_flex .c_r__flex_1 .c_r__img {
+        width: 72px;
+        height: 72px; }
+    .c_r__company_flex .c_r__flex_2 {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px; }
+    .c_r__company_flex .c_r__price {
+      min-width: 140px;
+      max-width: 200px;
+      font-size: 14px;
+      display: block; }
+    .c_r__company_flex .c_r__month {
+      width: auto;
+      min-width: 90px;
+      font-size: 14px;
+      padding-left: 0;
+      display: block; }
+    .c_r__company_flex .c_r__button {
+      min-width: 160px;
+      width: auto;
+      height: 100%;
+      display: block; }
+    .c_r__company_flex .c_r__title {
+      font-size: 18px;
+      display: block; }
+    .c_r__company_flex .__label {
+      display: block;
+      color: #667085;
+      font-size: 12px;
+      padding: 0 0 6px 0; }
+
+  .cborder {
+    height: auto; }
+
+  .c_r__company_flex__label {
+    display: none; }
+
   .flex_block_1 .g_col__logo {
     width: 50%; }
   .flex_block_1 .g_col__menu {
@@ -227,7 +294,8 @@
   .re_section__flex {
     padding: 30px 0;
     flex-direction: column-reverse; }
-    .re_section__flex .re_section__left {
+    .re_section__flex .re_section__left,
+    .re_section__flex .re_section__left_user {
       width: 100%;
       margin: 0; }
     .re_section__flex .re_section__right {
@@ -589,25 +657,102 @@
     background: #F5F5F7;
     padding: 6px;
     border-radius: 16px;
-    margin: 50px auto; } }
+    margin: 50px auto; }
+
+  .realy_button__right {
+    width: 100% !important; } }
 /* xiaomi pro6 */
 @media (max-width: 666px) {
-  .cabinet input[type=text].input, .cabinet input[type=email].input, .cabinet input[type=date].input, .cabinet input[type=number].input, .cabinet input[type=password].input, .cabinet .birthdate_wrap .birthdate, .cabinet .labelInput {
+  .cabinet input[type=text].input,
+  .cabinet input[type=email].input,
+  .cabinet input[type=date].input,
+  .cabinet input[type=number].input,
+  .cabinet input[type=password].input,
+  .cabinet .birthdate_wrap .birthdate,
+  .cabinet .labelInput,
+  .calc_form input[type=text].input,
+  .calc_form input[type=email].input,
+  .calc_form input[type=date].input,
+  .calc_form input[type=number].input,
+  .calc_form input[type=password].input,
+  .calc_form .birthdate_wrap .birthdate,
+  .calc_form .labelInput {
     font-size: 14px; }
 
   .slotButtons .w_30 {
     width: 100%; }
 
-  .cabinet .c__flex {
+  .cabinet .c__flex,
+  .calc_form .c__flex {
     display: block; }
 
-  .cabinet .c__flex .c__flex_50_left {
+  .cabinet .c__flex .c__flex_50_left,
+  .calc_form .c__flex .c__flex_50_left {
     width: 100%; }
 
-  .cabinet .c__flex .c__flex_50_right {
+  .cabinet .c__flex .c__flex_50_right,
+  .calc_form .c__flex .c__flex_50_right {
     width: 100%;
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .slotButtons__cbetween_left {
+    width: 55%; }
+
+  .slotButtons__cbetween_right {
+    width: 45%; }
+    .slotButtons__cbetween_right ._itog__price {
+      font-weight: 600;
+      font-size: calc(15px + 13 * ((100vw - 320px) / 1120)); } }
 @media (max-width: 568px) {
+  .c_r__company_flex {
+    display: block; }
+    .c_r__company_flex.c_r__company_flex__label {
+      display: none; }
+    .c_r__company_flex .c_r__flex_1 {
+      width: 100%;
+      min-height: 72px;
+      justify-content: start;
+      align-items: center; }
+      .c_r__company_flex .c_r__flex_1 .c_r__img {
+        width: 72px;
+        height: 72px; }
+    .c_r__company_flex .c_r__flex_2 {
+      width: 100%;
+      padding-top: 16px;
+      flex-wrap: wrap; }
+    .c_r__company_flex .c_r__month {
+      width: 50%;
+      min-width: 90px;
+      max-width: 500px;
+      font-size: 14px;
+      padding-left: 0;
+      display: block; }
+    .c_r__company_flex .c_r__price {
+      width: 50%;
+      min-width: 120px;
+      font-size: 14px;
+      max-width: 500px;
+      display: block; }
+    .c_r__company_flex form {
+      width: 100%; }
+    .c_r__company_flex .c_r__button {
+      width: 100%;
+      min-width: 160px;
+      max-width: 100%;
+      height: 100%;
+      display: block;
+      padding: 20px 0 0 0; }
+    .c_r__company_flex .c_r__title {
+      font-size: calc(13px + 3 * ((100vw - 320px) / 1120));
+      display: block; }
+    .c_r__company_flex .__label {
+      display: block;
+      color: #667085;
+      font-size: 12px;
+      padding: 0 0 6px 0; }
+    .c_r__company_flex.cborder {
+      padding: 16px; }
+
   .home_section__slider .h_sl__flex .h_sl__right .h_sl_right__top .h_sl_right__item {
     font-size: 16px; }
 
@@ -713,6 +858,9 @@
   .b_item__subtitle {
     font-size: 13px; } }
 @media (max-width: 416px) {
+  .re_section__flex .re_section__right {
+    padding: 16px; }
+
   .top_logo .l_ogo {
     width: 106px; }
   .top_logo .logo img {
@@ -740,6 +888,11 @@
   .b_item__subtitle {
     font-size: 11px; } }
 @media (max-width: 365px) {
+  .c_r__company_flex {
+    display: block; }
+    .c_r__company_flex.cborder {
+      padding: 6px; }
+
   .top_logo .l_ogo {
     width: 106px; }
   .top_logo .logo img {

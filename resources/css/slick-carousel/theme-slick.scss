@@ -286,13 +286,13 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev, .slick-prev:hover {
     /*  top: 164px !important;*/
-    left: -27px !important;
+    left: -24px !important;
 
 }
 
 .slick-next, .slick-next:hover {
     /*    top: 196px !important;*/
-    right: -27px !important;
+    right: -24px !important;
 
 }
 
@@ -476,6 +476,7 @@ $slick-opacity-not-active: 0.25 !default;
         width: 50px !important;
         height: 50px !important;
         top: 50% !important;
+        left: -12px !important;
 
         &:after, &:before, &:hover {
             width: 50px !important;
@@ -489,6 +490,7 @@ $slick-opacity-not-active: 0.25 !default;
         width: 50px !important;
         height: 50px !important;
         top: 50% !important;
+        right: -23px !important;
 
         &:after, &:before, &:hover {
             width: 50px !important;

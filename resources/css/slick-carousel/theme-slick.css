@@ -158,11 +158,11 @@
 
 .slick-prev, .slick-prev:hover {
   /*  top: 164px !important;*/
-  left: -27px !important; }
+  left: -24px !important; }
 
 .slick-next, .slick-next:hover {
   /*    top: 196px !important;*/
-  right: -27px !important; }
+  right: -24px !important; }
 
 .slick-prev:before {
   width: 65px;
@@ -279,7 +279,8 @@
 .ur_right__carusel .slick-prev {
   width: 50px !important;
   height: 50px !important;
-  top: 50% !important; }
+  top: 50% !important;
+  left: -12px !important; }
   .ur_right__carusel .slick-prev:after, .ur_right__carusel .slick-prev:before, .ur_right__carusel .slick-prev:hover {
     width: 50px !important;
     height: 50px !important;
@@ -287,7 +288,8 @@
 .ur_right__carusel .slick-next {
   width: 50px !important;
   height: 50px !important;
-  top: 50% !important; }
+  top: 50% !important;
+  right: -23px !important; }
   .ur_right__carusel .slick-next:after, .ur_right__carusel .slick-next:before, .ur_right__carusel .slick-next:hover {
     width: 50px !important;
     height: 50px !important;

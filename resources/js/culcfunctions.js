@@ -274,13 +274,13 @@ function CompaniesSort(companiessort, big_data, methodname) {
         html += '<div class="c_r__company_flex cborder">';
         html += '<div class="c_r__flex_1">';
         html += '<div class="c_r__img" style="background-image: url(\'/storage/'+ company.img +'\')"></div>';
-        html += '<div class="c_r__title">'+ title +'</div>';
+        html += '<div class="c_r__title"><div class="__label">Компания</div>'+ title +'</div>';
         html += '</div>';
 
 
         html += '<div class="c_r__flex_2">';
-        html += '<div class="c_r__month">12 месяцев</div>';
-        html += '<div class="c_r__price">' + Math.round(price).toLocaleString() +' ₸</div>';
+        html += '<div class="c_r__month"><div class="__label">Срок</div>12 месяцев</div>';
+        html += '<div class="c_r__price"><div class="__label">Цена</div>' + Math.round(price).toLocaleString() +' ₸</div>';
         html += '<form action="/calculator/design-of-the-results" method="POST"><input type="hidden" name="dataform" value=\''+ obString +'\' ><input type="hidden" name="_token" value="'+ document.querySelector('meta[name="csrf-token"]').content +'"><input type="hidden" name="methodname" value="' + methodname + '"><div class="c_r__button"><input type="submit" class="button button_normal" value="Купить"></div></form>';
         html += '</div>';
         html += '</div>';
