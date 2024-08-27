@@ -13,7 +13,6 @@ return Application::configure(basePath: dirname(__DIR__))
 
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->append(SeoMiddlware::class);
-
         $middleware->use([
 
         ]);

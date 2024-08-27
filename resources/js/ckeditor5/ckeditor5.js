@@ -25,7 +25,6 @@ import {
 //import translations from 'ckeditor5/dist/translations/ru';
 
 import 'ckeditor5/ckeditor5.css';
-
 import './style.css';
 
 const editorConfig = {
@@ -160,6 +159,6 @@ const editorConfig = {
    // translations: [translations]
 };
 
-if($('#editor').length) {
+if(document.getElementById("editor")) {
     ClassicEditor.create(document.querySelector('#editor'), editorConfig);
 }

@@ -77,7 +77,7 @@
                 <x-forms.text-label name="{{__('Общее количество работников')}}" class=""/>
                 <div class="text_input">
 
-                    <select class="js-chosen js-chosen_work__js" id="qy55" name=""
+                    <select class="js-chosen js-chosen_work__js" id="qy55" name="noname_text"
                             placeholder="Выберите общее количество работников">
                         <optgroup label="Выбрать общее количество работников">
                             <option value="1" selected="selected">до 100</option>
@@ -95,7 +95,7 @@
                 <x-forms.text-label name="{{__('Среднегодовое кол-во пострадавших')}}" class=""/>
                 <div class="text_input">
 
-                    <select class="js-chosen js-chosen_count__js" id="qy551" name=""
+                    <select class="js-chosen js-chosen_count__js" id="qy551" name="noname_text"
                             placeholder="Выберите среднегодовое кол-во пострадавших">
                         <optgroup label="Выбрать среднегодовое кол-во пострадавших">
                             <option value="1" selected="selected">от 2 до 9</option>
@@ -150,7 +150,7 @@
 
                     <x-forms.text-input_fromLabel
                         type="text"
-                        name=""
+                        name="noname_value"
                         placeholder="Кол-во персонала"
                         value="{{ old('personal')?:'1' }}"
                         required="true"
@@ -171,7 +171,7 @@
 <div class="mzp display_none" data-mzp="{{ $calc['mzp'] }}"></div>
                     <x-forms.text-input_fromLabel
                         type="text"
-                        name=""
+                        name="fond"
                         placeholder="Годовой фонд оплаты труда"
                         value="{{ old('fond')?:price($calc['mzp']*12) }}"
                         required="true"
@@ -218,7 +218,7 @@
                 <div class="text_input">
                     <input type="hidden" value="calcAccident" name="calcname">
                     <x-forms.button_div class="button_normal calc__js">
-                        {{__('Расчитать')}}
+                        {{__('Рассчитать')}}
                     </x-forms.button_div>
                 </div>
             </div>

@@ -31,16 +31,16 @@
                     <div class="re_section__left">
 
                         <div class="left_menu">
-                            <ul>
+
                                 @if($items)
                                     <ul class="">
                                         @foreach($items as $it)
-                                            <li class="{{ active_linkMenu(asset(route('legalperson_page', $it->slug))) }}"><a class="add__mobile_menu" href="{{route('legalperson_page', $it->slug)}}">{{ ($it->title_menu)?:$it->title }}</a></li>
+                                            <li class="{{ active_linkMenu(asset(route('legalperson_page', $it->slug))) }}"><a class="" href="{{route('legalperson_page', $it->slug)}}">{{ ($it->title_menu)?:$it->title }}</a></li>
                                         @endforeach
                                     </ul>
                                 @endif
 
-                            </ul>
+
                         </div>
 
 

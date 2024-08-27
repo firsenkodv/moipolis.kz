@@ -3,6 +3,8 @@
 @section('description', ($seo_description)?? __('Кабинет пользователя') )
 @section('keywords', ($seo_keywords)?? __('Кабинет пользователя') )
 @section('cabinet')
+    <main class="m_cabinet">
+
     <div class="auth">
         <div class="cabinet">
             <div class="block">
@@ -45,5 +47,6 @@
             </div>
         </div><!--.cabinet-->
     </div>
+    </main>
 @endsection
 

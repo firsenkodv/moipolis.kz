@@ -65,7 +65,9 @@ if (!function_exists('birthdate')) {
        if($birthdate == '1970-01-01') {
            return null;
        }
-       return $birthdate;
+        $date = new DateTime($birthdate);
+        $formattedDate = $date->format('d.m.Y');
+       return $formattedDate;
     }
 }
 

@@ -1,19 +1,17 @@
-import './jquery/jquery-3.7.1.min';
-import './slick/slick.min';
+import jQuery from 'jquery';
+window.$ = window.jQuery = jQuery;
 
-import './bootstrap';
+import IMask from 'imask';
+window.IMask = IMask;
+
 import {Fancybox} from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import './fancybox';
 
-// IMask to add input masks support
-import IMask from 'imask';
-window.IMask = IMask;
 
-//import './chosen/chosen.jquery';
-import 'chosen-js/chosen.jquery';
+import 'slick-carousel/slick/slick';
 import './ui/jquery-ui.min';
-
+import './chosen/chosen.jquery';
 
 
 import './ckeditor5/ckeditor5';

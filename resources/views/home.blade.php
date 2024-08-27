@@ -7,6 +7,8 @@
 @section('content')
     <main class="home_section">
 
+
+
        <section class="home_section__slider h_sl">
               @include('include.blocks.home_section__slider')
         </section>

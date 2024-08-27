@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="calc_col w_50 pad_l16">
-                <x-forms.text-label name="{{__('Выбрать город')}}" class=""/>
+                <x-forms.text-label name="{{__('Город')}}" class=""/>
 
                 <div class="text_input">
 
@@ -65,7 +65,7 @@
             </div>
             <div class="calc_col w_50 pad_l16">
 
-                <x-forms.text-label name="{{__('Выбрать франшизу')}}" class=""/>
+                <x-forms.text-label name="{{__('Франшиза по повреждению')}}" class=""/>
 
                 <div class="text_input">
 
@@ -75,7 +75,6 @@
                             @foreach($calc['json_fra'] as $k =>$fra)
                                 <option value="{{$fra['json_fra_text']}}">{{$fra['json_fra_label']}}</option>
                             @endforeach
-
 
                         </optgroup>
 
@@ -118,7 +117,7 @@
                     <input type="hidden" value="calcProperty" name="calcname">
                     <input type="hidden" value="{{ $calc['coefficient']  }}" name="coefficient">
                     <x-forms.button_div class="button_normal calc__js">
-                        {{__('Расчитать')}}
+                        {{__('Рассчитать')}}
                     </x-forms.button_div>
                 </div>
             </div>

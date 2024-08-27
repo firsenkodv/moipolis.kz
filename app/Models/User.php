@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Events\ResetPasswordEvent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -21,6 +22,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'avatar',
+        'published',
+        'birthdate',
+        'inn',
+        'bin',
+        'fio',
     ];
 
     /**
@@ -45,6 +53,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function child():HasMany
+    {
+        return $this->hasMany(UserPolicy::class);
+    }
+
 
 
     /**

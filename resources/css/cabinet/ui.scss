@@ -72,3 +72,7 @@ $maxWidth: 1440;
 .ui-datepicker-next-hover {
     background:  $colorRed !important;
 }
+
+.ui-datepicker {
+    z-index: 100 !important;
+}

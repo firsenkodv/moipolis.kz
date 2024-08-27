@@ -8,7 +8,7 @@
             <div class="g_col__phone_translate">
 
                 <div class="top_phone">
-                    <a href="tel:{{ config('site.setting.phone') }}">{{ config('site.setting.phone') }}</a>
+                    <a href="tel:{{ config('moonshine.setting.phone1') }}">{{ config('moonshine.setting.phone1') }}</a>
 
                 </div>
                 <div class="top_translate">

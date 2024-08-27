@@ -226,6 +226,27 @@ $maxWidth: 1440;
         font-weight: 600;
 
     }
+    .c_r__title_2 {
+        width: auto;
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content:center;
+        align-items: start;
+        flex-direction: column;
+        .c_r__title_2__policy {
+            font-size: 17px;
+            font-weight: 600;
+            padding: 0 0 6px 0;
+        }
+        .c_r__title_2__company {
+            color: $colorGrey;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+
+    }
 
     .c_r__month {
         width: auto;
@@ -262,6 +283,26 @@ $maxWidth: 1440;
 
 
     }
+
+    .c_r__button_2 {
+        max-width: 120px;
+        min-width: 120px;
+        width: auto;
+        height: 100%;
+        padding: 0 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        .c_r__button__date {
+            position: absolute;
+            color: $colorGrey;
+            font-weight: 100;
+            font-size: 13px;
+
+        }
+    }
+
 }
 
 .calc_top_th {
@@ -441,3 +482,77 @@ $maxWidth: 1440;
 
 /* переклюбчатель */
 
+
+
+
+.step1__st {
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    .step1_st__label {
+        padding: 0 15px 0 0;
+        color: $colorGrey;
+    }
+    .step1_st__text {
+        font-weight: bold;
+    }
+}
+
+
+._responce__calc {
+    position: relative;
+    .flashMassege__relative {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 26px 0 !important;
+        line-height: 1.4em;
+    }
+}
+._calcR {
+    .button {
+        padding: 0 16px;
+    }
+    .text_input:first-child {
+        margin-right: 20px;
+    }
+
+}
+
+._calc_hr {
+    width: 100%;
+    height: 2px;
+    margin: 39px 0 26px 0;
+    background: #E0E0E0;
+}
+.slotButtons__cbetween {
+    display: flex;
+    justify-content: space-between;
+}
+.slotButtons__cbetween_left {
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.slotButtons__cbetween_right {
+    width: 30%;
+}
+._itog {
+width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    flex-direction: column;
+    position: relative;
+    top: -10px;
+}
+._itog__text {
+    color: $colorGrey;
+    font-size: 13px;
+    padding: 0 0 6px 0;
+}
+._itog__price {
+    font-weight: 600;
+    font-size: 26px;
+}

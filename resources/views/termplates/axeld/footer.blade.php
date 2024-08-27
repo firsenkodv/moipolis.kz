@@ -15,16 +15,16 @@
                             Связь с нами в один клик
                         </div>
                         <div class="f_contact__phone">
-                            <a href="tel:{{ config('site.setting.phone') }}">{{ config('site.setting.phone') }}</a>
+                            <a href="tel:{{ config('moonshine.setting.phone1') }}">{{ config('moonshine.setting.phone1') }}</a>
                         </div>
                         <div class="f_contact__label_address">
                             Фактический адрес
                         </div>
 
                         <div class="f_contact__address">
-                            <div>Центр Страхования "General Re"</div>
-                            <div>Республика Казахстан</div>
-                            <div>г. Алматы пр. Сейфуллина 498 оф. 202</div>
+                            <div>{{ config('moonshine.setting.contact_name_company') }}</div>
+                            <div>{{ config('moonshine.setting.contact_republic') }}</div>
+                            <div>{{ config('moonshine.setting.contact_address') }}</div>
                         </div>
                     </div>
 
@@ -37,24 +37,23 @@
                         <div class="h4">Страховые</div>
                         <ul class=" nav menu mod-list">
                             @foreach($companies as $company)
-                                <li class=""><a href="{{ route('company', ['slug' => $company->slug]) }}">{{ $company->title_mini }}</a></li>
+                                <li class=""><a
+                                        href="{{ route('company', ['slug' => $company->slug]) }}">{{ $company->title_mini }}</a>
+                                </li>
                             @endforeach
                         </ul>
 
                     </div>
 
 
-
                     <div class="f2 ff">
 
                         <div class="h4">Направления</div>
                         <ul class=" nav menu mod-list">
+                            @foreach($individuals as $item)
+                             <a   href="{{ route('individual_page', ['slug' => $item->slug]) }}">{{ $item->title_menu }}</a>
+                            @endforeach
 
-                                <li class=""><a href="#">Здоровье</a></li>
-                                <li class=""><a href="#">Имущество</a></li>
-                                <li class=""><a href="#">Авто</a></li>
-                                <li class=""><a href="#">Аванс</a></li>
-                            <li class=""><a href="#">Туристам</a></li>
 
                         </ul>
 
@@ -79,7 +78,6 @@
                         </ul>
 
 
-
                     </div>
 
                 </div>
@@ -91,11 +89,11 @@
                             Мы в социальных сетях
                         </div>
                         <div class="top_socialBig">
-                            <a class="s-faceboock" target="_blank" href="https://www.facebook.com/generalre.kz/"></a>
-                            <a class="s-youtube" target="_blank" href="https://www.youtube.com/generalre"></a>
-                            <a class="s-instagram" target="_blank" href="https://www.instagram.com/generalre.kz/"></a>
-                            <a class="s-whatsapp" target="_blank" href="https://wa.me/77075594060"></a>
-                            <a class="s-telegram" target="_blank" href="https://t.me/generalre"></a>
+                            <a class="s-faceboock" target="_blank" href="{{ config('moonshine.setting.facebook') }}"></a>
+                            <a class="s-youtube" target="_blank" href="{{ config('moonshine.setting.youtube') }}"></a>
+                            <a class="s-instagram" target="_blank" href="{{ config('moonshine.setting.instagram') }}"></a>
+                            <a class="s-whatsapp" target="_blank" href="{{ config('moonshine.setting.whatsapp') }}"></a>
+                            <a class="s-telegram" target="_blank" href="{{ config('moonshine.setting.telegram') }}"></a>
                         </div>
 
                     </div>
@@ -118,7 +116,7 @@
             </div>
         </div>
         <div class="f_flexbottom">
-            <div class="copyright">© 1993 - {{ date("Y") }} Центр Страхования "General Re"</div>
+            <div class="copyright">© 1993 - {{ date("Y") }} {{ config('moonshine.setting.contact_copy') }}</div>
             <div class="sign_the_contract">
                 <a href="/contacts">Контакты для связи</a>
             </div>

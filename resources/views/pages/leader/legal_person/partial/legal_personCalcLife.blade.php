@@ -100,7 +100,7 @@
                     <input type="hidden" value="calcLife" name="calcname">
                     <input type="hidden" value="{{ $calc['coefficient']  }}" name="coefficient">
                     <x-forms.button_div class="button_normal calc__js">
-                        {{__('Расчитать')}}
+                        {{__('Рассчитать')}}
                     </x-forms.button_div>
                 </div>
             </div>

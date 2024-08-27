@@ -16,7 +16,8 @@ return new class extends Migration
 
             $table->foreignIdFor(City::class)
                 ->nullable()
-                ->constrained()->cascadeOnDelete();
+                ->constrained()
+                ->cascadeOnDelete();
         });
     }
 

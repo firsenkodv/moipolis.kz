@@ -77,7 +77,7 @@
                 <div class="text_input">
                     <input type="hidden" value="calcAvance" name="calcname">
                     <x-forms.button_div class="button_normal calc__js">
-                        {{__('Расчитать')}}
+                        {{__('Рассчитать')}}
                     </x-forms.button_div>
                 </div>
             </div>

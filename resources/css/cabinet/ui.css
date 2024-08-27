@@ -35,4 +35,7 @@
 .ui-datepicker-next-hover {
   background: #EF533F !important; }
 
+.ui-datepicker {
+  z-index: 100 !important; }
+
 /*# sourceMappingURL=ui.css.map */

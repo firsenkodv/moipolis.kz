@@ -30,7 +30,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        View::composer(['include.blocks.home_section__slider', 'include.menu.menu_top'], MenuIndividualComposer::class);
+        View::composer(['include.blocks.home_section__slider', 'include.menu.menu_top', 'termplates.axeld.footer'], MenuIndividualComposer::class);
         View::composer(['include.blocks.home_section__slider', 'modules.module_5', 'include.menu.menu_top'], MenuPersonLegalComposer::class);
         View::composer(['pages.contacts'], CityComposer::class);
         View::composer(['modules.module_3', 'termplates.axeld.footer'], CompanyComposer::class);

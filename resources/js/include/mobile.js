@@ -1,4 +1,4 @@
-export function mobile_menu () {
+export function mobile_menu() {
     /**
      * меню мобильное
      * */
@@ -51,7 +51,7 @@ export function mobile_menu () {
 
 }
 
-export function mobile_menu_close () {
+export function mobile_menu_close() {
 
 // закрытие меню
     $('body').on('click', '.m_m_top_close', function (event) {
@@ -68,6 +68,8 @@ export function add__mobile_menu() {
     $('.add__mobile_menu').each(function (index) {
         let active;
         if ($(this).hasClass('active')) {
+            active = 'active';
+        } else if ($(this).parents('li').hasClass('active')) {
             active = 'active';
         } else {
             active = '';

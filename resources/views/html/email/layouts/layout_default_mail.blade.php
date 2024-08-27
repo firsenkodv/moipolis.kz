@@ -354,7 +354,7 @@
                                     <tr>
                                         <td style="text-align: left; padding-right: 10px;">
                                             <h3 class="heading">© 1993 - {{  now()->year }} GeneralRe</h3>
-                                            <p>{!! config('site.setting.idn') !!}, {!! config('site.setting.country') !!}, <br>{!! config('site.setting.sityAddress') !!}</p>
+                                            <p></p>
                                         </td>
                                     </tr>
                                 </table>
@@ -366,7 +366,7 @@
             </tr><!-- end: tr -->
             <tr>
                 <td class="bg_white" style="text-align: center; ">
-                    <p style="margin: 4px 0">{{__('Не хотите получать уведомления? Напишите на ')}} {{ env('MAIL_USERNAME') }} </p>
+                    <p style="margin: 4px 0">{{__('Не хотите получать уведомления? Напишите на ')}} {{ config('app.mail_username')}} </p>
                 </td>
             </tr>
         </table>

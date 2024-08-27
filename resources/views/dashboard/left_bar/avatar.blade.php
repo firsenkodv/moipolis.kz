@@ -16,6 +16,15 @@
     <!-- Результат из upload.php -->
 </div>
 
+    <div class="c__title_subtitle">
+        <h3 class="F_h1 left_bar__name" title="{{ $user->name }}">{{ $user->name }}</h3>
+        <div class="F_h2 left_bar__email pad_t5"><span>{{ $user->email }}</span></div>
+        @if($user->phone)
+            <div class="left_bar__phone pad_t10"><span>{{ format_phone($user->phone) }}</span></div>
+        @endif
+
+    </div>
+
 
 
 

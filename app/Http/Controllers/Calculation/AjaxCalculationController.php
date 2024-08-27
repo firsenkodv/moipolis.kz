@@ -94,6 +94,7 @@ class AjaxCalculationController extends Controller
                     $r['value'] = '';
                 }
 
+
                 if (is_null($r['name'])) {
                     $r['value'] = '';
                 }
@@ -358,6 +359,7 @@ class AjaxCalculationController extends Controller
 
             $r = array_merge($inputs, $options);
             $sum = $this->multiplier($r); // умножаем //
+
             $companies = $this->companies($json_companies, $sum );
 
 

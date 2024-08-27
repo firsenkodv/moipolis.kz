@@ -5,6 +5,7 @@ namespace App\Models;
 use Domain\Company\QueryBuilders\CompanyQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Company extends Model
 {
@@ -45,6 +46,11 @@ class Company extends Model
         return new CompanyQueryBuilder($query);
     }
 
+
+    public function child():HasMany
+    {
+        return $this->hasMany(UserPolicy::class);
+    }
 
 
     public function getArrayModulesAttribute()

@@ -6,6 +6,7 @@ use App\Events\CreateUserEvent;
 use App\Events\MessageAdminCreateUserEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SignUpFormRequest;
+use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -19,7 +20,7 @@ class SignUpController extends Controller
         return view('auth.sign-up');
     }
 
-    public function handle(SignUpFormRequest $request): RedirectResponse
+    public function handle(SignUpFormRequest $request):RedirectResponse
     {
 
 
@@ -44,8 +45,7 @@ class SignUpController extends Controller
 
         MessageAdminCreateUserEvent::dispatch($request);
 
-
-        auth()->login($user); // залогинили
+        auth()->login($user, true); // залогинили
 
        return redirect()->intended(route('cabinet'));
 

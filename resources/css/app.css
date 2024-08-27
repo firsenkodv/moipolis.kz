@@ -19,18 +19,18 @@
 @import "./cabinet/cabinet.scss";
 @import "./cabinet/ui.scss";
 @import "./fancybox.scss";
-@import "./forms/loader.css";
 @import "./loader_map.css";
+@import "./forms/loader.css";
 @import "./forms/form_modal/form_modal.scss";
 @import "./forms/form_modal/qr_modal.scss";
 @import "./forms/button.scss";
 @import "./forms/checkbox.scss";
 @import "./forms/input.scss";
 @import "./forms/select.css";
+@import "./forms/calc.scss";
 @import "./templates/header.scss";
 @import "./templates/footer.scss";
 @import "./chosen/chosen.scss";
-@import "./forms/calc.scss";
 
 @import "html/logo/logo.scss";
 @import "html/menues/menu_top_header.scss";

@@ -2,23 +2,7 @@
 
 namespace App\Providers;
 
-
-use App\Events\AdminCreateUserEvent;
-use App\Events\CreateUserEvent;
-use App\Events\MessageAdminBuyProjectEvent;
-use App\Events\MessageAdminCreateUserEvent;
-use App\Events\OrderCallEvent;
-use App\Events\ResetPasswordEvent;
-use App\Listeners\AdminCreateUserHandlerListener;
-use App\Listeners\CreateUserHandlerListener;
-use App\Listeners\MessageAdminBuyProjectHandlerListener;
-use App\Listeners\MessageAdminCreateUserHandlerListener;
-use App\Listeners\OrderCallHandlerListener;
-use App\Listeners\ResetPasswordHandlerListener;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -27,22 +11,8 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array<class-string, array<int, class-string>>
      */
-    protected $listen = [
-        OrderCallEvent::class => [
-            OrderCallHandlerListener::class
-        ],
+    protected $listen = [];
 
-        CreateUserEvent::class => [
-            CreateUserHandlerListener::class
-        ],
-
-        MessageAdminCreateUserEvent::class => [
-            MessageAdminCreateUserHandlerListener::class
-        ],
-        ResetPasswordEvent::class => [
-            ResetPasswordHandlerListener::class
-        ],
-    ];
 
     /**
      * Register any events for your application.
@@ -54,6 +24,7 @@ class EventServiceProvider extends ServiceProvider
 
     /**
      * Determine if events and listeners should be automatically discovered.
+     * Определите, должны ли события и прослушиватели обнаруживаться автоматически.
      */
     public function shouldDiscoverEvents(): bool
     {

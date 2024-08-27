@@ -6,7 +6,6 @@ namespace App\Providers;
 
 use App\Http\Controllers\Moonshine\LegalPersonCalc;
 use App\Models\CatalogIndividual;
-use App\MoonShine\Pages\CalcProperty;
 use App\MoonShine\Pages\IndividualCalcCASKO;
 use App\MoonShine\Pages\IndividualCalcProperty;
 use App\MoonShine\Pages\LegalPersonCalcAccident;
@@ -15,6 +14,7 @@ use App\MoonShine\Pages\LegalPersonCalcCASKO2;
 use App\MoonShine\Pages\LegalPersonCalcLifeProperty;
 use App\MoonShine\Pages\legalPersonCalcProperty2;
 use App\MoonShine\Pages\LegalPersonCalcResponsibility;
+use App\MoonShine\Pages\SettingPage;
 use App\MoonShine\Resources\CatalogIndividualResource;
 use App\MoonShine\Resources\CatalogIndividualSettingResource;
 use App\MoonShine\Resources\CatalogPersonLegalResource;
@@ -108,6 +108,10 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                     static fn() => __('SEO'),
                     new SeoResource()
                 )->icon('heroicons.outline.bug-ant'),
+                MenuItem::make(
+                    static fn() => __('Фронт'),
+                    new SettingPage()
+                )->icon('heroicons.outline.cog'),
 
             ]),
             MenuGroup::make(static fn() => __('Страховщики'), [

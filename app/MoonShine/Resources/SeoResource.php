@@ -19,12 +19,7 @@ use MoonShine\Handlers\ImportHandler;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
-use MoonShine\Fields\Field;
-use MoonShine\Components\MoonShineComponent;
 
-/**
- * @extends ModelResource<Seo>
- */
 class SeoResource extends ModelResource
 {
     protected string $model = SEO::class;
@@ -61,9 +56,9 @@ class SeoResource extends ModelResource
 
             Text::make(__('Заголовок'), 'title'),
             Text::make(__('Url'), 'url'),
-            Text::make(__('Title'), 'metatitle')->unescape(),
-            Switcher::make('Description', 'description')->unescape(),
-            Switcher::make('Keywords', 'keywords')->unescape(),
+            Text::make(__('Title'), 'metatitle'),
+            Switcher::make('Description', 'description'),
+            Switcher::make('Keywords', 'keywords'),
 
 
         ];
@@ -84,6 +79,7 @@ class SeoResource extends ModelResource
                             ->sortable(),
                         Collapse::make('url адрес страницы', [
                             Text::make(__('Url'), 'url')->required(),
+
                         ]),
 
                         Collapse::make('Title/Description/Keywords', [
@@ -96,6 +92,7 @@ class SeoResource extends ModelResource
                                 ->hint('meta description'),
                             Text::make('Keywords', 'keywords')
                                 ->hint('meta keywords'),
+
                         ]),
 
                     ])

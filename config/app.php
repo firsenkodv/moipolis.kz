@@ -2,6 +2,14 @@
 
 return [
 
+
+
+    'mail_username' => env('MAIL_USERNAME'),
+
+    'mail_admin' => env('MAIL_ADMIN'),
+
+    'app_url' => env('APP_URL'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

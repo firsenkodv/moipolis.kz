@@ -17,7 +17,6 @@ class DashboardController extends Controller
     {
 
         /**
-         * Разделяем вход в cabinet - у каждого своя view
          */
 
           $user   = auth()->user();
@@ -68,6 +67,9 @@ class DashboardController extends Controller
                 ->update([
                     'name' => $request->name,
                     'phone' => $request->phone,
+                    'inn' => $request->inn,
+                    'bin' => $request->bin,
+                    'fio' => $request->fio,
                     'birthdate' => ($request->birthdate) ?: auth()->user()->birthdate,
                 ]);
         }

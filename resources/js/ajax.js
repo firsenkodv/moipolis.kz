@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $('body').on('click', '.calc__js', function (event) {
 
+        $('#calc_result').html('')
         let Parent = $(this).parents('.calc');
 
 
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let object_val = {};
                 let object_name = {};
                 object_val.name = $(this).find('.off__flex span').text();
+                object_val.title = $(this).find('.off__flex span').text();
                 object_val.value = $(this).data('option');
                 options.push(object_val);
             }
@@ -134,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
             let object_name = {};
             object_val.name = $(this).attr('name');
             object_val.value = $(this).val();
+            object_val.title = $(this).parents('.calc_col').find('.calc_label span').text();
+            object_val.text = $(this).find('option:selected').text();
             inputs.push(object_val);
 
         });
@@ -141,12 +145,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // проверка обязательных полей
         if (error) {
             openTModalFancyError()
-
             return false
         }
 
-        /*   console.log(inputs)
-             console.log(options)   */
+        console.log('Нажатие "рассчитать"')
+        console.log(inputs)
+        console.log(options)
         big_data.push({'inputs': inputs, 'options': options})
 
         $.ajax({
@@ -187,36 +191,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
                                 // физ лица
                                 if(methodName == 'calcProperty') {
-                                    html = calcProperty(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcProperty(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
+
+
                                 }
                                 if(methodName == 'calcCASKO') {
-                                    html = calcCASKO(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcCASKO(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
                                 }
 
                                 // юр. лица
                                 if(methodName == 'calcAccident') {
-                                    html = calcAccident(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcAccident(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
                                 }
 
                                 if(methodName == 'calcLife') {
-                                    html = calcLife(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcLife(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
                                 }
 
                                 if(methodName == 'calcCASKO2') {
-                                    html = calcCASKO2(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcCASKO2(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
                                 }
 
                                 if(methodName == 'calcProperty2') {
-                                    html = calcProperty2(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcProperty2(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
                                 }
 
                                 if(methodName == 'calcAvance') {
-                                    html = calcAvance(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcAvance(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
 
                                 }
 
                                 if(methodName == 'calcResponsibility') {
-                                    html = calcResponsibility(response.result) // см. файл /resources/js/culcfunctions.js
+                                    html = calcResponsibility(response.result, big_data, methodName) // см. файл /resources/js/culcfunctions.js
 
                                 }
 

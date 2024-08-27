@@ -20,7 +20,6 @@
 </head>
 <body>
     <div class="content_  @yield('class')">
-
         <x-message.message/>
         <x-message.message_error/>
 
@@ -31,7 +30,7 @@
     @include('html.mobile.bottom')
 
 
-    @include('include.modals.temp_forms.call_me')
+@include('include.modals.temp_forms.call_me')
 @include('include.modals.temp_forms.gr')
 @include('include.modals.temp_forms.error')
 </body>

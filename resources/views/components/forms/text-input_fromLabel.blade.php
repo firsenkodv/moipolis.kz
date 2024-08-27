@@ -5,10 +5,12 @@
     'placeholder' => '',
     'id' => '',
     'datamin' => '',
-    'datamax' => ''
+    'datamax' => '',
+    'required' => ''
 ])
 <input
     type="{{ $type  }}"
+    {{ ($required == 'true')? ' required ' : ''  }}
     id="{{ $id }}"
     value="{{ $value  }}"
     data-min="{{ $datamin }}"

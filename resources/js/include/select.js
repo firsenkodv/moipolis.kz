@@ -2,7 +2,6 @@ export function chosen() {
     //todo:jquery
 
     /* -- js-chosen  -- */
-
     if($('.js-chosen').length) {
         $('.js-chosen').chosen({
             width: '100%',

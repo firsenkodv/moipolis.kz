@@ -10,6 +10,42 @@ class SendMails
 
 
     /**
+     * policy
+     */
+    public function send_to_User_new_Policy($data):void
+    {
+        $view = 'html.email.policy.new_policy_user';
+        $subject =  'Страховой полис. ' . $data['calc_session']['item']->title_calc;
+
+        Mail::send(
+            $view,
+            ['data' => $data],
+            function ($message) use ($data, $subject)
+            {
+            $message->to(($data['request']->email)?:$data['user']->email, 'Admin')->subject($subject);
+             }
+        );
+    }
+    public function send_to_Admin_new_Policy($data):void
+    {
+        $view = 'html.email.policy.new_policy_admin';
+        $subject =  'Создан страховой полис. ' . $data['calc_session']['item']->title_calc;
+
+        Mail::send(
+            $view,
+            ['data' => $data],
+            function ($message) use ($data, $subject)
+            {
+            $message->to(config('app.mail_username'), 'Admin')->subject($subject);
+             }
+        );
+    }
+
+    /**
+     * policy
+     */
+
+    /**
      * auth
      */
     public function send_to_User($user):void
@@ -28,7 +64,7 @@ class SendMails
         $subject =  'Создан аккаунт -  '. $user->email;
 
         Mail::send($view, ['user' => $user],  function ($message) use ($user, $subject){
-            $message->to(env("MAIL_USERNAME"), 'Admin')->subject($subject);
+            $message->to(config('app.mail_username'), 'Admin')->subject($subject);
         });
     }
     public function send_to_ResetPassword($data):void
@@ -53,7 +89,7 @@ class SendMails
         $subject = 'Заказ обратного звонка ' . $data['phone'];
 
         Mail::send($view, ['data' => $data],  function ($message) use ($subject){
-            $message->to(env("MAIL_USERNAME"), 'Admin')->subject($subject);
+            $message->to(config('app.mail_username'), 'Admin')->subject($subject);
         });
     }
 

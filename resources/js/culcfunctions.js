@@ -2,10 +2,12 @@
 Физические лица
  */
 
-export function calcProperty(companies) {
+export function calcProperty(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
+
+
     for (var key in companies) {
         sum = companies[key].sum;
         title = companies[key].name;
@@ -22,13 +24,11 @@ export function calcProperty(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
-export function calcCASKO(companies) {
+export function calcCASKO(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -48,9 +48,7 @@ export function calcCASKO(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
@@ -60,7 +58,7 @@ export function calcCASKO(companies) {
 /*
 Юридические  лица
  */
-export function calcCASKO2(companies) {
+export function calcCASKO2(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -80,13 +78,12 @@ export function calcCASKO2(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
-export function calcProperty2(companies) {
+export function calcProperty2(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -106,16 +103,14 @@ export function calcProperty2(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+
+    return CompaniesSort(companiessort, big_data, methodname);
 
 
 }
 
 
-
-export function calcLife(companies) {
+export function calcLife(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -135,13 +130,12 @@ export function calcLife(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
-export function calcAvance(companies) {
+export function calcAvance(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -161,13 +155,12 @@ export function calcAvance(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
-export function calcResponsibility(companies) {
+export function calcResponsibility(companies, big_data, methodname) {
 
     let sum, title, company, coefficient, price, html;
     html = '';
@@ -187,22 +180,23 @@ export function calcResponsibility(companies) {
         return parseFloat(a[1].sum) - parseFloat(b[1].sum);
     }); // сортируем по полю sort
 
-    /*                    console.log(companies);
-                          console.log(companiessort);*/
-    return CompaniesSort(companiessort);
+    return CompaniesSort(companiessort, big_data, methodname);
 
 }
 
-export function calcAccident(companies) {
+export function calcAccident(companies, big_data, methodname) {
 
 
     /////
 
     let Price = $('.fond').val().replace(/\s/g, '');
+
     let mzp = Number($('.mzp').data('mzp'));
 
     let Personal = Number($('.personal').val());
+
     let Risk = Number($('.risk_tarif__js').text());
+
     let Koef = 1;
 
     let Radio  = $('.accident_radio__js input[type="radio"]:checked').val();
@@ -234,8 +228,9 @@ export function calcAccident(companies) {
         coefficient = companies[key].value;
         price = Number(sum)*Number(coefficient);
         companies[key].sum = price;
-
     }
+
+
     let companiessort = Object.entries(companies) // переведем в массив
 
     companiessort.sort(function(a, b) {
@@ -243,11 +238,8 @@ export function calcAccident(companies) {
     }); // сортируем по полю sort
 
 
-      /*              console.log(companies);
-                    console.log(companiessort);*/
 
-
-    return CompaniesSort(companiessort);
+    return CompaniesSort(companiessort, big_data, methodname);
 
 
 
@@ -261,17 +253,24 @@ export function calcAccident(companies) {
  *
  */
 
-function CompaniesSort(companiessort) {
-    let sum, title, company, coefficient, price, html;
+function CompaniesSort(companiessort, big_data, methodname) {
+    let sum, title, company, coefficient, price, id, html, title_calc;
     html = '';
     for (var key in companiessort) {
 
         price = companiessort[key][1].sum;
         title = companiessort[key][1].name;
         company = companiessort[key][1].data;
+        id = company['id'];
         coefficient = companiessort[key][1].value;
+        title_calc = $('h1.h2__title').text()
 
-        html += '<div class="calc_result__company">';
+
+        let ob = {big_data, price, title, id, title_calc};
+        let obString = JSON.stringify(ob);
+
+
+        html += '<div class="calc_result__company" data-form=\''+ obString +'\'>';
         html += '<div class="c_r__company_flex cborder">';
         html += '<div class="c_r__flex_1">';
         html += '<div class="c_r__img" style="background-image: url(\'/storage/'+ company.img +'\')"></div>';
@@ -282,7 +281,7 @@ function CompaniesSort(companiessort) {
         html += '<div class="c_r__flex_2">';
         html += '<div class="c_r__month">12 месяцев</div>';
         html += '<div class="c_r__price">' + Math.round(price).toLocaleString() +' ₸</div>';
-        html += '<div class="c_r__button"><div class="button button_normal">Купить</div></div>';
+        html += '<form action="/calculator/design-of-the-results" method="POST"><input type="hidden" name="dataform" value=\''+ obString +'\' ><input type="hidden" name="_token" value="'+ document.querySelector('meta[name="csrf-token"]').content +'"><input type="hidden" name="methodname" value="' + methodname + '"><div class="c_r__button"><input type="submit" class="button button_normal" value="Купить"></div></form>';
         html += '</div>';
         html += '</div>';
         html += '</div>';
@@ -290,7 +289,6 @@ function CompaniesSort(companiessort) {
     }
     return html;
 }
-
 /**
  *
  * Помошники основных функций калькулятора

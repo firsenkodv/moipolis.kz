@@ -11,9 +11,9 @@
                         $i = 1;
                     @endphp
                     @foreach($companies_options as $company)
-
+<div class="slick_slide">
                         <div
-                            class="partner__item p_item p_item_{{$i}}  @php $i++; @endphp    @if($loop->index>2) media__1600 @endif"
+                            class=" partner__item p_item p_item_{{$i}}  @php $i++; @endphp    @if($loop->index>2) media__1600 @endif"
                             style="background-color: rgba(131, 35, 28, 0.04)">
                             <div class="p_item__content">
                                 <div class="p_item__title h3__title"><span>{!! $company['title'] !!}</span></div>
@@ -39,6 +39,7 @@
                                 @endif
                             </div>
                         </div>
+</div>
 
                     @endforeach
                 @endif

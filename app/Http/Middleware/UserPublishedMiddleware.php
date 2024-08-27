@@ -13,7 +13,6 @@ class UserPublishedMiddleware
 
 
         $user = auth()->user();
-
         if ($user) {
             if ($user->published) {
                 return $next($request);
