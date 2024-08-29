@@ -23,44 +23,63 @@
 
 
             </div>
-            <div class="h_sl_right__bottom">
-                <div class="h_sl_item__buttoms">
-                    <a href="#" class="button_white"><span>{{ __('Застраховать') }}</span></a>
-                    <a href="#" class="button_red"><span>{{ __('Купить полис') }}</span></a>
-                </div>
 
+            <div class="h_sl__flex2__desktop">
+                <div class="h_sl_right__bottom">
+                    <div class="h_sl_item__buttoms">
+                        <a href="#" class="button_white"><span>{{ __('Застраховать') }}</span></a>
+                        <a href="#" class="button_red"><span>{{ __('Купить полис') }}</span></a>
+                    </div>
+                </div>
             </div>
 
 
         </div>
 
     </div>
-    <div class="h_sl__flex2">
-        <div class="h_sl__left2 h_sl_a2 h_sl_a2__js active"><p data-type="fl">
-                <span>{{'Для Физических лиц'}}</span></p></div>
-        <div class="h_sl__right2 h_sl_a2 h_sl_a2__js"><p data-type="yl">
-                <span>{{'Для Юридических лиц'}}</span></p></div>
-    </div>
 
-    <div class="h_sl__flex3">
-
-        <div class="g_type fl active">
-            @if($individuals)
-                @foreach($individuals as $individual)
-                    <a href="{{asset(config('links.links.individuals').'/' . $individual->slug)}}"
-                       @if($loop->first) class="active" @endif><span>{{$individual->title}}</span></a>
-                @endforeach
-            @endif
-        </div>
-
-        <div class="g_type yl">
-            @if($legal_persons)
-                @foreach($legal_persons as $legal_person)
-                    <a href="{{asset(config('links.links.legal-persons').'/' . $legal_person->slug)}}" @if($loop->first) class="active" @endif><span>{{$legal_person->title}}</span></a>
-
-                @endforeach
-            @endif
+    <div class="h_sl__flex2__mobile">
+        <div class="h_sl__flex2">
+            <a href="{{route('individual_category')}}" class="h_sl__left2 h_sl_a2 ">
+                <span>{{'Физическим лицам'}}</span>
+            </a>
+            <a href="{{route('legalperson_category')}}" class="h_sl__right2 h_sl_a2">
+                <span >{{'Юридическим лицам'}}</span>
+            </a>
         </div>
 
     </div>
+    <div class="h_sl__flex2__desktop">
+        <div class="h_sl__flex2">
+            <div class="h_sl__left2 h_sl_a2 h_sl_a2__js active"><p data-type="fl">
+                    <span>{{'Для Физических лиц'}}</span></p></div>
+            <div class="h_sl__right2 h_sl_a2 h_sl_a2__js"><p data-type="yl">
+                    <span>{{'Для Юридических лиц'}}</span></p></div>
+        </div>
+
+        <div class="h_sl__flex3">
+
+            <div class="g_type fl active">
+                @if($individuals)
+                    @foreach($individuals as $individual)
+                        <a href="{{asset(config('links.links.individuals').'/' . $individual->slug)}}"
+                           @if($loop->first) class="active" @endif><span>{{$individual->title}}</span></a>
+                    @endforeach
+                @endif
+            </div>
+
+            <div class="g_type yl">
+                @if($legal_persons)
+                    @foreach($legal_persons as $legal_person)
+                        <a href="{{asset(config('links.links.legal-persons').'/' . $legal_person->slug)}}"
+                           @if($loop->first) class="active" @endif><span>{{$legal_person->title}}</span></a>
+
+                    @endforeach
+                @endif
+            </div>
+
+        </div>
+    </div>
+
+
 </div>

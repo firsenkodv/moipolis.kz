@@ -126,7 +126,7 @@
 
 
     <div class="calc_top_th color_grey pad_t36" id="MyscrollTop">
-        <div class="c_r__company_flex">
+        <div class="c_r__company_flex c_r__company_flex__label">
             <div class="c_r__flex_1">
                   <div class="td">{{__('Страховая компания')}}</div>
             </div>

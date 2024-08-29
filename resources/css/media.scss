@@ -148,6 +148,70 @@ $maxWidth: 1440;
     }
 }
 
+@media screen and (max-width: 1268px) {
+    .cabinet .c__flex,
+    .calc_form .c__flex {
+        display: block
+    }
+
+    .cabinet .c__flex .c__flex_50_left,
+    .calc_form .c__flex .c__flex_50_left {
+        width: 100%
+    }
+
+    .cabinet .c__flex .c__flex_50_right,
+    .calc_form .c__flex .c__flex_50_right, {
+        width: 100%;
+        padding-left: 0
+    }
+
+    .slotButtons__cbetween_left {
+
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+
+    ._calcR {
+        position: relative;
+        margin-bottom: 19px;
+    }
+    .slotButtons__cbetween_left {
+
+        position: unset;
+
+        button[type="submit"] {
+            font-size: 18px !important;
+        }
+
+        .text_input:last-child {
+
+            position: unset;
+            padding-top: 13px;
+
+            button[type="submit"] {
+                position: absolute;
+                width: 100%;
+                min-width: 100%;
+                display: block;
+
+            }
+        }
+
+    }
+
+    .slotButtons__cbetween_right {
+        width: 45%;
+
+        ._itog__price {
+            font-weight: 600;
+            @include adaptiv-font(28, 15);
+        }
+    }
+}
+
 @media screen and (max-width: 1216px) {
 
     .c_r__company_flex {
@@ -163,6 +227,7 @@ $maxWidth: 1440;
             font-size: 14px;
 
         }
+
         .c_r__button {
             min-width: 90px;
             width: auto;
@@ -285,23 +350,27 @@ $maxWidth: 1440;
 
     .c_r__company_flex {
         display: block;
+
         .c_r__flex_1 {
             width: 100%;
             min-height: 72px;
             justify-content: start;
             align-items: center;
+
             .c_r__img {
                 width: 72px;
                 height: 72px;
             }
 
         }
+
         .c_r__flex_2 {
             width: 100%;
             justify-content: space-between;
             align-items: center;
             padding-top: 16px;
         }
+
         .c_r__price {
             min-width: 140px;
             max-width: 200px;
@@ -318,6 +387,7 @@ $maxWidth: 1440;
             display: block;
 
         }
+
         .c_r__button {
             min-width: 160px;
             width: auto;
@@ -331,6 +401,7 @@ $maxWidth: 1440;
             font-size: 18px;
             display: block;
         }
+
         .__label {
             display: block;
             color: $colorGrey;
@@ -344,11 +415,6 @@ $maxWidth: 1440;
     .c_r__company_flex__label {
         display: none;
     }
-
-
-
-
-
 
 
     .flex_block_1 {
@@ -594,9 +660,7 @@ $maxWidth: 1440;
         flex-direction: column-reverse;
 
         .re_section__left,
-        .re_section__left_user
-
-        {
+        .re_section__left_user {
             width: 100%;
             margin: 0;
         }
@@ -626,6 +690,8 @@ $maxWidth: 1440;
 }
 
 @media screen and (max-width: 868px) {
+
+
     .flex_block_2 {
         .g_col2__menu {
             width: 82%;
@@ -660,6 +726,22 @@ $maxWidth: 1440;
 
 /* pocofon  x3 */
 @media (max-width: 793px) {
+
+    .step1__st {
+        align-items: start;
+        padding-top: 10px;
+        padding-bottom: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #dddddd;
+
+        .step1_st__label {
+            width: 50%;
+
+        }
+        .step1_st__text {
+            width: 50%;
+        }
+    }
 
     .home_section__slider {
         min-height: 471px;
@@ -1213,7 +1295,6 @@ $maxWidth: 1440;
     .cabinet input[type=password].input,
     .cabinet .birthdate_wrap .birthdate,
     .cabinet .labelInput,
-
     .calc_form input[type=text].input,
     .calc_form input[type=email].input,
     .calc_form input[type=date].input,
@@ -1221,7 +1302,6 @@ $maxWidth: 1440;
     .calc_form input[type=password].input,
     .calc_form .birthdate_wrap .birthdate,
     .calc_form .labelInput,
-
     {
         font-size: 14px
     }
@@ -1231,13 +1311,12 @@ $maxWidth: 1440;
     }
 
     .cabinet .c__flex,
-    .calc_form .c__flex
-    {
+    .calc_form .c__flex {
         display: block
     }
 
-    .cabinet .c__flex .c__flex_50_left ,
-    .calc_form .c__flex .c__flex_50_left{
+    .cabinet .c__flex .c__flex_50_left,
+    .calc_form .c__flex .c__flex_50_left {
         width: 100%
     }
 
@@ -1246,13 +1325,47 @@ $maxWidth: 1440;
         width: 100%;
         padding-left: 0
     }
+
     .slotButtons__cbetween_left {
+
         width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+
+    ._calcR {
+        position: relative;
+        margin-bottom: 19px;
+    }
+    .slotButtons__cbetween_left {
+
+        position: unset;
+
+        button[type="submit"] {
+            font-size: 14px !important;
+        }
+
+        .text_input:last-child {
+
+            position: unset;
+            padding-top: 13px;
+
+            button[type="submit"] {
+                position: absolute;
+                width: 100%;
+                min-width: 100%;
+                display: block;
+
+            }
+        }
 
     }
 
     .slotButtons__cbetween_right {
         width: 45%;
+
         ._itog__price {
             font-weight: 600;
             @include adaptiv-font(28, 15);
@@ -1265,6 +1378,7 @@ $maxWidth: 1440;
 
     .c_r__company_flex {
         display: block;
+
         &.c_r__company_flex__label {
             display: none;
 
@@ -1446,8 +1560,13 @@ $maxWidth: 1440;
     }
 
     .formLogin__wrapp {
-        width: 96%;
-        padding: 10px
+        max-width: 1000px;
+        width: 100%;
+
+    }
+    .F_form_474 {
+        min-width: auto;
+        width: 90%;
     }
 
     .formLogin .slotButtons__left {
@@ -1468,9 +1587,55 @@ $maxWidth: 1440;
     }
 
 
+    .slotButtons__cbetween_left {
+
+        position: unset;
+
+        button[type="submit"] {
+            height: 39px;
+            font-size: 13px !important;
+        }
+
+        .text_input:last-child {
+
+            position: unset;
+            padding-top: 13px;
+
+            button[type="submit"] {
+                position: absolute;
+                width: 100%;
+                min-width: 100%;
+                display: block;
+
+            }
+        }
+
+    }
+
+
 }
 
 @media (max-width: 468px) {
+
+    .h_sl__flex2__desktop {
+        display: none;
+    }
+
+    .h_sl__flex2__mobile {
+        display: block;
+    }
+
+    .calc_title__options {
+        padding: 4px;
+        margin: 16px 0;
+        background: $colorRed;
+        color: #fff;
+    }
+
+    .step1__st {
+        font-size: 14px;
+    }
+
     .flex_block_1 {
         .top_phone {
             padding: 0 5px 0 15px;
@@ -1521,6 +1686,23 @@ $maxWidth: 1440;
 }
 
 @media (max-width: 416px) {
+    .home_section__slider {
+        min-height: 500px;
+        .h_sl__flex2 {
+            a:first-child {
+                margin-right: 5px;
+            }
+            a:last-child {
+                margin-left: 5px;
+            }
+        }
+
+        a.h_sl_a2 {
+            padding: 10px 4px !important;
+            width: 100% !important;
+            font-size: 13px !important;
+        }
+    }
     .re_section__flex {
         .re_section__right {
             padding: 16px;
@@ -1624,6 +1806,9 @@ $maxWidth: 1440;
 
 
 @media (max-width: 376px) {
+    ._calcR .text_input:first-child {
+        margin-right: 2px;
+    }
 
     .mob_flex .m_f {
         font-size: 12px;
