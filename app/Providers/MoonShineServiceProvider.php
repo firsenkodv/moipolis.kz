@@ -12,7 +12,7 @@ use App\MoonShine\Pages\LegalPersonCalcAccident;
 use App\MoonShine\Pages\LegalPersonCalcAvance;
 use App\MoonShine\Pages\LegalPersonCalcCASKO2;
 use App\MoonShine\Pages\LegalPersonCalcLifeProperty;
-use App\MoonShine\Pages\legalPersonCalcProperty2;
+use App\MoonShine\Pages\LegalPersonCalcProperty2;
 use App\MoonShine\Pages\LegalPersonCalcResponsibility;
 use App\MoonShine\Pages\SettingPage;
 use App\MoonShine\Resources\CatalogIndividualResource;
