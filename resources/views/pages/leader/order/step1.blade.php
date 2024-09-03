@@ -149,6 +149,10 @@
                                                 </x-forms.primary-button>
                                             </div>
 
+                                            <div class="text_input">
+
+                                            </div>
+
                                         @else
                                             <div class="text_input">
                                                 <x-forms.primary-button_white_red>
@@ -157,12 +161,11 @@
                                             </div>
 
 
-                                            <div class=" text_input">
+                                            <div class="text_input">
                                                 <input type="hidden" value="{{ $password  }}" name="password">
                                                 <input type="hidden" value="{{ $password  }}"
                                                        name="password_confirmation">
                                                 <x-forms.primary-button_register>
-
                                                     {{ __('Оформить полис и зарегистрироваться') }}
                                                 </x-forms.primary-button_register>
                                             </div>

@@ -66,7 +66,7 @@
                                             <div class="c_r__price">{{ $item->price }}</div>
                                             <div class="c_r__button_2">
                                                 <div class="c_r__button__pdf"></div>
-                                                <div class="c_r__button__date">Действительно до {{$item->created_at}}</div>
+                                                <div class="c_r__button__date">До <span>{{rusdate3($item->created_at)}}</span></div>
                                             </div>
 
 

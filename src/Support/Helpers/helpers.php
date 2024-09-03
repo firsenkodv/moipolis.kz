@@ -359,8 +359,10 @@ if (!function_exists('shortcode')) {
  */
 
 if (!function_exists('rusdate')) {
-    function rusdate($timestump): string|null
+    function rusdate($date): string|null
     {
+        $timestump = strtotime($date);
+
         $month = [1 => "Янв", 2 => "Фев", 3 => "Мар", 4 => "Апр", 5 => "Май", 6 => "Июн", 7 => "Июл", 8 => "Авг", 9 => "Сен", 10 => "Окт", 11 => "Ноя", 12 => "Дек"];
         $return = date('d', $timestump);
         $return .= " " . $month[date('n', $timestump)];
@@ -378,7 +380,7 @@ if (!function_exists('rusdate2')) {
 
         $days = ['(вс)', '(пн)', '(вт)', '(ср)', '(чт)', '(пт)', '(сб)'];
 
-        $day = $days[date("w", strtotime($date))];
+        $day = $days[date("w", $date)];
         $m = $month[date('n', $timestump)];
         $d = date('d', $timestump);
 
