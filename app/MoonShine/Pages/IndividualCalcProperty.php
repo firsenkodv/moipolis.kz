@@ -104,13 +104,13 @@ class IndividualCalcProperty extends Page
 
 
 
-        $title = (config('moonshine.individual.individualCalcProperty.title')) ?: '';
+/*        $title = (config('moonshine.individual.individualCalcProperty.title')) ?: '';
         $json_object = (config('moonshine.individual.individualCalcProperty.json_object')) ?: '';
         $json_city = (config('moonshine.individual.individualCalcProperty.json_city')) ?: '';
         $json_fra = (config('moonshine.individual.individualCalcProperty.json_fra')) ?: '';
         $json_moreoptions = (config('moonshine.individual.individualCalcProperty.json_moreoptions')) ?: '';
         $coefficient = (config('moonshine.individual.individualCalcProperty.coefficient')) ?: '';
-        $json_company = (config('moonshine.individual.individualCalcProperty.json_company')) ?: '';
+        $json_company = (config('moonshine.individual.individualCalcProperty.json_company')) ?: '';*/
 
 
 

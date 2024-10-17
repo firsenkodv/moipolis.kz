@@ -103,14 +103,14 @@ class LegalPersonCalcCASKO2 extends Page
 
 
 
-        $title = (config('moonshine.legal_person.legal_personCalcCASKO2.title')) ?: '';
+/*        $title = (config('moonshine.legal_person.legal_personCalcCASKO2.title')) ?: '';
         $json_fra = (config('moonshine.legal_person.legal_personCalcCASKO2.json_fra')) ?: '';
         $json_fra_ugon = (config('moonshine.legal_person.legal_personCalcCASKO2.json_fra_ugon')) ?: '';
         $json_type = (config('moonshine.legal_person.legal_personCalcCASKO2.json_type')) ?: '';
         $json_auto = (config('moonshine.legal_person.legal_personCalcCASKO2.json_auto')) ?: '';
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcCASKO2.json_moreoptions')) ?: '';
         $coefficient = (config('moonshine.legal_person.legal_personCalcCASKO2.coefficient')) ?: '';
-        $json_company = (config('moonshine.legal_person.legal_personCalcCASKO2.json_company')) ?: '';
+        $json_company = (config('moonshine.legal_person.legal_personCalcCASKO2.json_company')) ?: '';*/
 
         return [
 

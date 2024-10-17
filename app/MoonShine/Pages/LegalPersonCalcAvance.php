@@ -93,12 +93,12 @@ class LegalPersonCalcAvance extends Page
         }
 
 
-
+/*
         $title = (config('moonshine.legal_person.legal_personCalcAvance.title')) ?: '';
 
         $json_contract = (config('moonshine.legal_person.legal_personCalcAvance.json_contract')) ?: '';
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcAvance.json_moreoptions')) ?: '';
-        $json_company = (config('moonshine.legal_person.legal_personCalcAvance.json_company')) ?: '';
+        $json_company = (config('moonshine.legal_person.legal_personCalcAvance.json_company')) ?: '';*/
 
         return [
 

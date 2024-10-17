@@ -98,14 +98,14 @@ class IndividualCalcCASKO extends Page
         }
 
 
-        $title = (config('moonshine.individual.individualCalcCASKO.title')) ?: '';
+ /*       $title = (config('moonshine.individual.individualCalcCASKO.title')) ?: '';
         $json_fra = (config('moonshine.individual.individualCalcCASKO.json_fra')) ?: '';
         $json_fra_ugon = (config('moonshine.individual.individualCalcCASKO.json_fra_ugon')) ?: '';
         $json_type = (config('moonshine.individual.individualCalcCASKO.json_type')) ?: '';
         $json_auto = (config('moonshine.individual.individualCalcCASKO.json_auto')) ?: '';
         $json_moreoptions = (config('moonshine.individual.individualCalcCASKO.json_moreoptions')) ?: '';
         $coefficient = (config('moonshine.individual.individualCalcCASKO.coefficient')) ?: '';
-        $json_company = (config('moonshine.individual.individualCalcCASKO.json_company')) ?: '';
+        $json_company = (config('moonshine.individual.individualCalcCASKO.json_company')) ?: '';*/
 
         return [
 

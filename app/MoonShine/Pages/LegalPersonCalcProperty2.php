@@ -102,13 +102,13 @@ class LegalPersonCalcProperty2 extends Page
 
 
 
-        $title = (config('moonshine.legal_person.legal_personCalcProperty2.title')) ?: '';
+     /*   $title = (config('moonshine.legal_person.legal_personCalcProperty2.title')) ?: '';
         $json_object = (config('moonshine.legal_person.legal_personCalcProperty2.json_object')) ?: '';
         $json_city = (config('moonshine.legal_person.legal_personCalcProperty2.json_city')) ?: '';
         $json_fra = (config('moonshine.legal_person.legal_personCalcProperty2.json_fra')) ?: '';
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcProperty2.json_moreoptions')) ?: '';
         $coefficient = (config('moonshine.legal_person.legal_personCalcProperty2.coefficient')) ?: '';
-        $json_company = (config('moonshine.legal_person.legal_personCalcProperty2.json_company')) ?: '';
+        $json_company = (config('moonshine.legal_person.legal_personCalcProperty2.json_company')) ?: '';*/
 
         return [
 

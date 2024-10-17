@@ -93,13 +93,13 @@ class LegalPersonCalcAccident extends Page
         }
 
 
-        $title = (config('moonshine.legal_person.legal_personCalcAccident.title')) ?: '';
+/*        $title = (config('moonshine.legal_person.legal_personCalcAccident.title')) ?: '';
         $json_risk = (config('moonshine.legal_person.legal_personCalcAccident.json_risk')) ?: '';
 
 
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcAccident.json_moreoptions')) ?: '';
         $json_company = (config('moonshine.legal_person.legal_personCalcAccident.json_company')) ?: '';
-        $mzp = (config('moonshine.legal_person.legal_personCalcAccident.mzp')) ?: '';
+        $mzp = (config('moonshine.legal_person.legal_personCalcAccident.mzp')) ?: '';*/
 
         return [
 

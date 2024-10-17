@@ -92,13 +92,13 @@ class LegalPersonCalcLifeProperty extends Page
 
 
 
-        $title = (config('moonshine.legal_person.legal_personCalcLife.title')) ?: '';
+/*        $title = (config('moonshine.legal_person.legal_personCalcLife.title')) ?: '';
         $json_case = (config('moonshine.legal_person.legal_personCalcLife.json_case')) ?: '';
         $json_case2 = (config('moonshine.legal_person.legal_personCalcLife.json_case2')) ?: '';
 
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcLife.json_moreoptions')) ?: '';
         $coefficient = (config('moonshine.legal_person.legal_personCalcLife.coefficient')) ?: '';
-        $json_company = (config('moonshine.legal_person.legal_personCalcLife.json_company')) ?: '';
+        $json_company = (config('moonshine.legal_person.legal_personCalcLife.json_company')) ?: '';*/
 
         return [
 

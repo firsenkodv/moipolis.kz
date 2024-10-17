@@ -94,10 +94,10 @@ class LegalPersonCalcResponsibility extends Page
 
 
 
-       $title = (config('moonshine.legal_person.legal_personCalcAvance.title')) ?: '';
+/*       $title = (config('moonshine.legal_person.legal_personCalcAvance.title')) ?: '';
         $json_profession = (config('moonshine.legal_person.legal_personCalcResponsibility.json_profession')) ?: '';
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcResponsibility.json_moreoptions')) ?: '';
-        $json_company = (config('moonshine.legal_person.legal_personCalcResponsibility.json_company')) ?: '';
+        $json_company = (config('moonshine.legal_person.legal_personCalcResponsibility.json_company')) ?: '';*/
 
         return [
 
