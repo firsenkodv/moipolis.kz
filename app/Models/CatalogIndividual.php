@@ -35,24 +35,33 @@ protected $fillable = [
     public function getCalcAttribute()
     {
         $arrt = [];
-        if($this->params) {
-        foreach ($this->params as $f) {
-            $arrt[$f] = config('moonshine.individual.' . $f );
+            if($this->params) {
+            foreach ($this->params as $f) {
 
+                $arrt[$f] = config2_array('moonshine.individual.' . $f );
 
-        }
-    }
-
+               }
+           }
 
         return $arrt;
     }
+
+
 
 
     protected static function boot()
     {
         parent::boot();
 
-        static::created(function () {
+        # Проверка данных  перед сохранением
+        static::saving(function ($Moonshine) {
+            if($Moonshine->params[0]=="0") {
+                $Moonshine->params = null;
+            };
+        });
+
+
+            static::created(function () {
             cache_clear();
         });
 

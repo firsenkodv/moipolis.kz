@@ -17,8 +17,6 @@ class MenuPersonLegalComposer
             ->orderBy('sorting')
             ->get();
 
-
-
         $view->with([
             'legal_persons' => $legal_persons,
         ]);

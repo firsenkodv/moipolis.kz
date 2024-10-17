@@ -36,7 +36,7 @@ class CatalogPersonLegal extends Model
         $arrt = [];
         if($this->params) {
             foreach ($this->params as $f) {
-                $arrt[$f] = config('moonshine.legal_person.' . $f );
+                $arrt[$f] = config2_array('moonshine.legal_person.' . $f );
             }
         }
 
@@ -48,6 +48,12 @@ class CatalogPersonLegal extends Model
     protected static function boot()
     {
         parent::boot();
+        # Проверка данных  перед сохранением
+        static::saving(function ($Moonshine) {
+            if($Moonshine->params[0]=="0") {
+                $Moonshine->params = null;
+            };
+        });
 
         static::created(function () {
             cache_clear();

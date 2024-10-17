@@ -18,9 +18,6 @@ class MenuIndividualComposer
             ->orderBy('sorting')
             ->get();
 
-
-
-
         $view->with([
             'individuals' => $individuals,
         ]);

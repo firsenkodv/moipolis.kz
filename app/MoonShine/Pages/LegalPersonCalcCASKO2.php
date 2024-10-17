@@ -8,6 +8,7 @@ use App\Models\CatalogIndividualSetting;
 use App\Models\CatalogPersonLegalSetting;
 use App\Models\City;
 use App\Models\Company;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\FormBuilder;
 use MoonShine\Decorations\Block;
 use MoonShine\Decorations\Column;
@@ -74,11 +75,32 @@ class LegalPersonCalcCASKO2 extends Page
 
     }
 
+
+
+    public function setting()
+    {
+
+        if (Storage::disk('config')->exists('moonshine/legal_person/legal_personCalcCASKO2.php')) {
+            $result = include(storage_path('app/public/config/moonshine/legal_person/legal_personCalcCASKO2.php'));
+        } else {
+            $result = null;
+        }
+
+        return (is_array($result)) ? $result : null;
+
+    }
+
+
     /**
      * @return list<MoonShineComponent>
      */
     public function components(): array
     {
+
+        if(!is_null($this->setting())) {
+            extract($this->setting());
+        }
+
 
 
         $title = (config('moonshine.legal_person.legal_personCalcCASKO2.title')) ?: '';
@@ -121,7 +143,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_fra_ugon_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_fra_ugon),
+                                            ->removable()->default((isset($json_fra_ugon))? $json_fra_ugon : ''),
                                     ]),
 
                                     Divider::make('Тип транспорта'),
@@ -134,7 +156,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_type_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_type),
+                                            ->removable()->default((isset($json_type))? $json_type : ''),
                                     ]),
 
                                 ])->columnSpan(6),
@@ -152,7 +174,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_fra_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_fra),
+                                            ->removable()->default((isset($json_fra))? $json_fra : ''),
 
 
                                     ]),
@@ -166,7 +188,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_auto_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_auto),
+                                            ->removable()->default((isset($json_auto))? $json_auto : ''),
 
                                     ])
                                 ])->columnSpan(6),
@@ -189,7 +211,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_moreoptions_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default($json_moreoptions),
+                                            ->removable()->default((isset($json_moreoptions))? $json_moreoptions : ''),
 
 
                                     ]),
@@ -214,7 +236,7 @@ class LegalPersonCalcCASKO2 extends Page
                                             Text::make('', 'json_company_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_company),
+                                            ->removable()->default((isset($json_company))? $json_company : ''),
 
 
                                     ]),
@@ -229,7 +251,7 @@ class LegalPersonCalcCASKO2 extends Page
                             Grid::make([
                                 Column::make([
                                     Block::make([
-                                        Text::make('Коэффициент', 'coefficient')->hint('Коэффициент Страхование имущества для Юр. лиц')->default($coefficient),
+                                        Text::make('Коэффициент', 'coefficient')->hint('Коэффициент Страхование имущества для Юр. лиц')->default((isset($coefficient))? $coefficient : ''),
                                     ])
 
 

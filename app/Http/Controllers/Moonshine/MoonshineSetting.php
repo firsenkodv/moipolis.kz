@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Moonshine;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Http\Controllers\MoonShineController;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -13,9 +14,7 @@ class MoonshineSetting extends MoonShineController
     {
 
         $data = $request->all();
-
-
-        file_put_contents(base_path('config') . '/moonshine/setting.php', "<?php\n\n" . 'return ' . var_export($data, true) . ";\n");
+        Storage::disk('config')->put("moonshine/setting.php", "<?php\n\n" . 'return ' . var_export($data, true) . ";\n");
 
         return back();
     }

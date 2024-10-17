@@ -198,7 +198,8 @@ class CatalogIndividualResource extends ModelResource
 
     public function calc()
     {
-        $path = base_path("config/moonshine/individual");
+        $path = storage_path("app/public/config/moonshine/individual");
+
         return $this->list_files($path);
 
     }
@@ -225,10 +226,11 @@ class CatalogIndividualResource extends ModelResource
             $array[0] = '---';
             foreach ($files as $file) {
                 $f = pathinfo($file, PATHINFO_FILENAME); // file
-                $array[$f] = (config('moonshine.individual.' . $f . '.title')) ?: '';
+                $array[$f] = (config2('moonshine.individual.' . $f . '.title')) ?: '';
 
             }
         }
+
 
         return $array;
     }

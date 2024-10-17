@@ -54,6 +54,15 @@ return [
             'throw' => false,
         ],
 
+
+        'config' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/config'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         'intervention' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

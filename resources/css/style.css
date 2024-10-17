@@ -161,7 +161,7 @@ h1.h1 {
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTk2IiBoZWlnaHQ9IjM3NCIgdmlld0JveD0iMCAwIDU5NiAzNzQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIG9wYWNpdHk9IjAuMDgiPgo8cGF0aCBkPSJNMCAwVjM2Ny44MjdIMTA0LjM5MlYyMzYuMTI5SDEyOC45NTVMMjAzLjE1NSAzNjcuODI3SDMxMy42ODhMMjI2LjE4MyAyMTUuNTUyQzI2NC41NjIgMjAwLjYzMyAyOTIuMTk1IDE3MS44MjQgMjkyLjE5NSAxMTguODM2VjExNi43NzlDMjkyLjE5NSAzOC41ODMyIDIzOS40ODggMCAxNDMuMjgzIDBIMFpNMTM4LjE2NiAxNjcuNzA4SDEwNC4zOTJWNzkuMjI0MkgxMzguNjc4QzE3Mi45NjMgNzkuMjI0MiAxOTAuODczIDkwLjU0MTkgMTkwLjg3MyAxMjAuODk0VjEyMi45NTJDMTkwLjg3MyAxNTIuMjc1IDE3My40NzUgMTY3LjcwOCAxMzguMTY2IDE2Ny43MDhaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDYwLjM5MyAzNzRDNTQxLjc1NyAzNzQgNTg3LjgxMiAzNDAuMDQ3IDU5NiAyNzguODI4SDUxMC4wM0M1MDYuNDQ4IDI5Ni44MzQgNDk0LjE2NyAzMTAuNzI0IDQ2My40NjMgMzEwLjcyNEM0MzAuNzEzIDMxMC43MjQgNDEwLjI0NCAyOTAuMTQ2IDQwNy42ODUgMjU0LjY0OUg1OTZWMjMwLjQ3QzU5NiAxODIuNjI3IDU4MC4xMzcgMTQ3LjY0NSA1NTUuNTc0IDEyNS4wMUM1MzAuNDk5IDEwMi4zNzQgNDk2LjcyNSA5MS41NzA5IDQ1OS44ODEgOTEuNTcwOUM0MTkuNDU1IDkxLjU3MDkgMzgzLjEyMiAxMDQuOTQ2IDM1Ny4wMjQgMTI5LjY0QzMzMC45MjYgMTU0LjMzMyAzMTUuMDYzIDE4OS4zMTUgMzE1LjA2MyAyMzIuNTI4VjIzNi42NDRDMzE1LjA2MyAyODAuMzcxIDMzMC40MTUgMzE1LjM1NCAzNTYuNTEzIDMzOC41MDNDMzgxLjU4NyAzNjEuNjUzIDQxNy45MiAzNzQgNDYwLjM5MyAzNzRaTTUwNi45NiAyMDIuNjkxSDQwOC43MDlDNDEzLjMxNCAxNjkuNzY2IDQzMS43MzYgMTUyLjI3NSA0NTkuODgxIDE1Mi4yNzVDNDkwLjA3MyAxNTIuMjc1IDUwNS40MjUgMTY5Ljc2NiA1MDYuOTYgMjAyLjY5MVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPC9zdmc+Cg==");
   color: #fff;
-  min-height: 461px; }
+  min-height: 525px; }
   .home_section__slider .h_sl__flex {
     display: flex;
     justify-content: space-between; }
@@ -373,6 +373,34 @@ h1.h1 {
 /**
   * Наши партнеры
   * */
+/**
+  * Слайдеры на главной
+  * */
+.___carusel {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 295px;
+  position: relative; }
+  .___carusel .ur_item__img {
+    background: #F5F5F7; }
+  .___carusel .___carusel_wrap {
+    position: absolute;
+    top: -90px;
+    display: none;
+    width: 100%; }
+    .___carusel .___carusel_wrap.active {
+      display: block;
+      height: 385px;
+      overflow: hidden; }
+  .___carusel .ur_item__img {
+    width: 281px !important;
+    height: 348px; }
+  .___carusel .h4__title {
+    font-size: 19px; }
+
+/**
+  * /////Слайдеры на главной
+  * */
 .partners {
   width: 100%;
   min-height: 391px; }
@@ -522,31 +550,32 @@ h1.h1 {
   .ur_flex .ur_right {
     width: 62%;
     padding-top: 65px; }
-    .ur_flex .ur_right .ur_item__img {
-      text-decoration: none;
-      width: 310px !important;
-      height: 348px;
-      background: #fff;
-      border-radius: 16px;
-      margin: 0 10px;
-      padding: 0 !important;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column; }
-      .ur_flex .ur_right .ur_item__img:hover .h4__title {
-        color: #EF533F; }
-      .ur_flex .ur_right .ur_item__img .ur_item__title {
-        width: 100%;
-        height: 100px;
-        padding: 24px; }
-        .ur_flex .ur_right .ur_item__img .ur_item__title .h4__title {
-          padding: 0; }
-      .ur_flex .ur_right .ur_item__img .ur_item___img {
-        width: 100%;
-        height: 248px;
-        background: #ccc;
-        border-radius: 0 0 16px 16px; }
+
+.ur_item__img {
+  text-decoration: none;
+  width: 310px !important;
+  height: 348px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 0 10px;
+  padding: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .ur_item__img:hover .h4__title {
+    color: #EF533F; }
+  .ur_item__img .ur_item__title {
+    width: 100%;
+    height: 100px;
+    padding: 24px; }
+    .ur_item__img .ur_item__title .h4__title {
+      padding: 0; }
+  .ur_item__img .ur_item___img {
+    width: 100%;
+    height: 248px;
+    background: #ccc;
+    border-radius: 0 0 16px 16px; }
 
 /**
   * Для Юридичесикх компаний

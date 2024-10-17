@@ -196,7 +196,8 @@ class CatalogPersonLegalResource extends ModelResource
 
     public function calc()
     {
-        $path = base_path("config/moonshine/legal_person");
+
+        $path = storage_path("app/public/config/moonshine/legal_person");
         return $this->list_files($path);
 
     }
@@ -223,7 +224,7 @@ class CatalogPersonLegalResource extends ModelResource
             $array[0] = '---';
             foreach ($files as $file) {
                 $f = pathinfo($file, PATHINFO_FILENAME); // file
-                $array[$f] = (config('moonshine.legal_person.' . $f . '.title')) ?: '';
+                $array[$f] = (config2('moonshine.legal_person.' . $f . '.title')) ?: '';
 
             }
         }

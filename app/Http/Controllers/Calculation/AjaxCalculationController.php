@@ -20,8 +20,6 @@ class AjaxCalculationController extends Controller
             $error = 'No methodName!!!';
         }
 
-
-
         /**
          * возвращаем назад в браузер
          */
@@ -155,7 +153,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.individual.individualCalcProperty.json_company'))?:[];
+            $json_companies = (config2('moonshine.individual.individualCalcProperty.json_company'))?:[];
 
 
         $r = array_merge($inputs, $options);
@@ -191,7 +189,7 @@ class AjaxCalculationController extends Controller
             $inputs = (isset($type['inputs']))?$type['inputs']:[];
             $options = (isset($type['options']))?$type['options']:[];
 
-            $json_companies = (config('moonshine.individual.individualCalcCASKO.json_company'))?:[];
+            $json_companies = (config2('moonshine.individual.individualCalcCASKO.json_company'))?:[];
 
             $r = array_merge($inputs, $options);
             $sum = $this->multiplier($r); // умножаем //
@@ -241,7 +239,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcProperty2.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcProperty2.json_company'))?:[];
 
 
             $r = array_merge($inputs, $options);
@@ -274,7 +272,7 @@ class AjaxCalculationController extends Controller
             $inputs = (isset($type['inputs']))?$type['inputs']:[];
             $options = (isset($type['options']))?$type['options']:[];
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcCASKO2.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcCASKO2.json_company'))?:[];
 
             $r = array_merge($inputs, $options);
             $sum = $this->multiplier($r); // умножаем //
@@ -313,7 +311,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcLife.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcLife.json_company'))?:[];
 
 
             $r = array_merge($inputs, $options);
@@ -354,7 +352,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcAccident.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcAccident.json_company'))?:[];
 
 
             $r = array_merge($inputs, $options);
@@ -395,7 +393,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcAvance.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcAvance.json_company'))?:[];
 
 
             $r = array_merge($inputs, $options);
@@ -436,7 +434,7 @@ class AjaxCalculationController extends Controller
             $options = (isset($type['options']))?$type['options']:[];
 
 
-            $json_companies = (config('moonshine.legal_person.legal_personCalcResponsibility.json_company'))?:[];
+            $json_companies = (config2('moonshine.legal_person.legal_personCalcResponsibility.json_company'))?:[];
 
 
             $r = array_merge($inputs, $options);

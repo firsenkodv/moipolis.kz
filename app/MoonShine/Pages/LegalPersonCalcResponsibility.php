@@ -8,6 +8,7 @@ use App\Models\CatalogIndividualSetting;
 use App\Models\CatalogPersonLegalSetting;
 use App\Models\City;
 use App\Models\Company;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\FormBuilder;
 use MoonShine\Decorations\Block;
 use MoonShine\Decorations\Column;
@@ -65,13 +66,35 @@ class LegalPersonCalcResponsibility extends Page
 
     }
 
+
+    public function setting()
+    {
+
+        if (Storage::disk('config')->exists('moonshine/legal_person/legal_personCalcResponsibility.php')) {
+            $result = include(storage_path('app/public/config/moonshine/legal_person/legal_personCalcResponsibility.php'));
+        } else {
+            $result = null;
+        }
+
+        return (is_array($result)) ? $result : null;
+
+    }
+
+
+
     /**
      * @return list<MoonShineComponent>
      */
     public function components(): array
     {
 
-        $title = (config('moonshine.legal_person.legal_personCalcAvance.title')) ?: '';
+        if(!is_null($this->setting())) {
+            extract($this->setting());
+        }
+
+
+
+       $title = (config('moonshine.legal_person.legal_personCalcAvance.title')) ?: '';
         $json_profession = (config('moonshine.legal_person.legal_personCalcResponsibility.json_profession')) ?: '';
         $json_moreoptions = (config('moonshine.legal_person.legal_personCalcResponsibility.json_moreoptions')) ?: '';
         $json_company = (config('moonshine.legal_person.legal_personCalcResponsibility.json_company')) ?: '';
@@ -114,7 +137,7 @@ class LegalPersonCalcResponsibility extends Page
                                             Text::make('', 'json_profession_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_profession),
+                                            ->removable()->default((isset($json_profession))? $json_profession : ''),
 
 
                                     ])
@@ -138,7 +161,7 @@ class LegalPersonCalcResponsibility extends Page
                                             Text::make('', 'json_moreoptions_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default($json_moreoptions),
+                                            ->removable()->default((isset($json_moreoptions))? $json_moreoptions : ''),
 
 
                                     ]),
@@ -163,7 +186,7 @@ class LegalPersonCalcResponsibility extends Page
                                             Text::make('', 'json_company_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_company),
+                                            ->removable()->default((isset($json_company))? $json_company : ''),
 
 
                                     ]),

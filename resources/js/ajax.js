@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     PersonalInputRange() //range на class personal
 
 
+    //  калькулятор
 
     $('body').on('click', '.calc__js', function (event) {
 

@@ -7,6 +7,7 @@ namespace App\MoonShine\Pages;
 
 use App\MoonShine\Fields\BusinessCard;
 use App\MoonShine\Fields\ItemAmount;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\Card;
 use MoonShine\Components\FormBuilder;
 use MoonShine\Decorations\Block;
@@ -44,6 +45,20 @@ class SettingPage extends Page
     }
 
 
+    public function setting()
+    {
+
+        if (Storage::disk('config')->exists('moonshine/setting.php')) {
+            $result = include(storage_path('app/public/config/moonshine/setting.php'));
+        } else {
+            $result = null;
+        }
+
+        return (is_array($result)) ? $result : null;
+
+    }
+
+
 
     /**
      * @return list<MoonShineComponent>
@@ -51,27 +66,9 @@ class SettingPage extends Page
     public function components(): array
     {
 
-
-        $contact_title = (config('moonshine.setting.contact_title')) ?: '';
-        $contact_name_company = (config('moonshine.setting.contact_name_company')) ?: '';
-        $contact_republic = (config('moonshine.setting.contact_republic')) ?: '';
-        $contact_address = (config('moonshine.setting.contact_address')) ?: '';
-        $contact_copy = (config('moonshine.setting.contact_copy')) ?: '';
-        $phone1 = (config('moonshine.setting.phone1')) ?: '';
-        $phone2 = (config('moonshine.setting.phone2')) ?: '';
-        $email = (config('moonshine.setting.email')) ?: '';
-        $slogan1 = (config('moonshine.setting.slogan1')) ?: '';
-        $slogan2 = (config('moonshine.setting.slogan2')) ?: '';
-        $footer_title = (config('moonshine.setting.footer_title')) ?: '';
-        $footer_text = (config('moonshine.setting.footer_text')) ?: '';
-
-        $contact_file = (config('moonshine.setting.contact_file')) ?: '';
-
-        $facebook = (config('moonshine.setting.facebook')) ?: '';
-        $youtube = (config('moonshine.setting.youtube')) ?: '';
-        $instagram = (config('moonshine.setting.instagram')) ?: '';
-        $whatsapp = (config('moonshine.setting.whatsapp')) ?: '';
-        $telegram = (config('moonshine.setting.telegram')) ?: '';
+        if(!is_null($this->setting())) {
+            extract($this->setting());
+        }
 
 
         return [
@@ -90,8 +87,8 @@ class SettingPage extends Page
                                     Divider::make('Константы'),
 
                                     Block::make([
-                                        Text::make('Название', 'slogan2')->default($slogan2),
-                                        Text::make('Название в логотипе', 'slogan1')->default($slogan1),
+                                        Text::make('Название', 'slogan2')->default((isset($slogan2))? $slogan2 :''),
+                                        Text::make('Название в логотипе', 'slogan1')->default((isset($slogan1))? $slogan1 :''),
 
 
 
@@ -99,11 +96,11 @@ class SettingPage extends Page
                                     Divider::make('Соц.сети'),
 
                                     Block::make([
-                                        Text::make('FaceBook', 'facebook')->default($facebook),
-                                        Text::make('YouTube', 'youtube')->default($youtube),
-                                        Text::make('Instagram', 'instagram')->default($instagram),
-                                        Text::make('WhatsApp', 'whatsapp')->default($whatsapp),
-                                        Text::make('Telegram', 'telegram')->default($telegram),
+                                        Text::make('FaceBook', 'facebook')->default((isset($facebook))? $facebook :''),
+                                        Text::make('YouTube', 'youtube')->default((isset($youtube))? $youtube :''),
+                                        Text::make('Instagram', 'instagram')->default((isset($instagram))? $instagram :''),
+                                        Text::make('WhatsApp', 'whatsapp')->default((isset($whatsapp))? $whatsapp :''),
+                                        Text::make('Telegram', 'telegram')->default((isset($telegram))? $telegram :''),
                                     ]),
 
 
@@ -114,13 +111,13 @@ class SettingPage extends Page
                                     Divider::make('Контакты'),
 
                                     Block::make([
-                                        Text::make('Название компании', 'contact_name_company')->default($contact_name_company),
-                                        Text::make('Республика', 'contact_republic')->default($contact_republic),
-                                        Text::make('Адрес', 'contact_address')->default($contact_address),
-                                        Text::make('Copyright', 'contact_copy')->default($contact_copy),
-                                        Text::make(__('Телефон'), 'phone1')->default($phone1),
-                                        Text::make(__('Телефон 2'), 'phone2')->default($phone2),
-                                        Text::make(__('Email'), 'email')->default($email),
+                                        Text::make('Название компании', 'contact_name_company')->default((isset($contact_name_company))? $contact_name_company :''),
+                                        Text::make('Республика', 'contact_republic')->default((isset($contact_republic))? $contact_republic :''),
+                                        Text::make('Адрес', 'contact_address')->default((isset($contact_address))? $contact_address :''),
+                                        Text::make('Copyright', 'contact_copy')->default((isset($contact_copy))? $contact_copy :''),
+                                        Text::make(__('Телефон'), 'phone1')->default((isset($phone1))? $phone1 :''),
+                                        Text::make(__('Телефон 2'), 'phone2')->default((isset($phone2))? $phone2 :''),
+                                        Text::make(__('Email'), 'email')->default((isset($email))? $email :''),
                                     ]),
 
 

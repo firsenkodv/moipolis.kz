@@ -18,11 +18,13 @@
 
                 <div class="page_title pad_t1_important">
                     <h1 class="h2__title">{{ $item->title }}</h1>
+
                     @if($item->subtitle)
                         <div class="page__subtitle">
                             {{ $item->subtitle  }}
                         </div>
                     @endif
+
                 </div>
 
 

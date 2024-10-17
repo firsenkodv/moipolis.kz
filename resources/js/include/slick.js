@@ -50,5 +50,18 @@ export function slick() {
     });
 
 
+    $('.slick_slider__carusel_ind_legal').slick({
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        // centerMode: true,
+        swipeToSlide: true,
+        variableWidth: true,
+        infinite: true,
+        speed: 700,
+        /*    autoplay: true,*/
+        autoplaySpeed: 5000,
+    });
+
+
 
 }

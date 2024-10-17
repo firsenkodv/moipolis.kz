@@ -7,6 +7,7 @@ namespace App\MoonShine\Pages;
 use App\Models\CatalogIndividualSetting;
 use App\Models\City;
 use App\Models\Company;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\FormBuilder;
 use MoonShine\Decorations\Block;
 use MoonShine\Decorations\Column;
@@ -73,11 +74,28 @@ class IndividualCalcCASKO extends Page
 
     }
 
+    public function setting()
+    {
+
+        if (Storage::disk('config')->exists('moonshine/individual/individualCalcCASKO.php')) {
+            $result = include(storage_path('app/public/config/moonshine/individual/individualCalcCASKO.php'));
+        } else {
+            $result = null;
+        }
+
+        return (is_array($result)) ? $result : null;
+
+    }
+
+
     /**
      * @return list<MoonShineComponent>
      */
     public function components(): array
     {
+        if(!is_null($this->setting())) {
+            extract($this->setting());
+        }
 
 
         $title = (config('moonshine.individual.individualCalcCASKO.title')) ?: '';
@@ -90,7 +108,6 @@ class IndividualCalcCASKO extends Page
         $json_company = (config('moonshine.individual.individualCalcCASKO.json_company')) ?: '';
 
         return [
-
 
             FormBuilder::make('/moonshine/individual/individual-calc-CASKO', 'POST')
                 ->fields([
@@ -120,7 +137,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_fra_ugon_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_fra_ugon),
+                                            ->removable()->default((isset($json_fra_ugon))? $json_fra_ugon : ''),
                                     ]),
 
                                     Divider::make('Тип транспорта'),
@@ -133,7 +150,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_type_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_type),
+                                            ->removable()->default((isset($json_type))? $json_type : ''),
                                     ]),
 
                                 ])->columnSpan(6),
@@ -151,7 +168,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_fra_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_fra),
+                                            ->removable()->default((isset($json_fra))? $json_fra : ''),
 
 
                                     ]),
@@ -165,7 +182,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_auto_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_auto),
+                                            ->removable()->default((isset($json_auto))? $json_auto : ''),
 
                                     ])
                                 ])->columnSpan(6),
@@ -188,7 +205,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_moreoptions_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default($json_moreoptions),
+                                            ->removable()->default((isset($json_moreoptions))? $json_moreoptions : ''),
 
 
                                     ]),
@@ -213,7 +230,7 @@ class IndividualCalcCASKO extends Page
                                             Text::make('', 'json_company_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_company),
+                                            ->removable()->default((isset($json_company))? $json_company : ''),
 
 
                                     ]),
@@ -228,7 +245,7 @@ class IndividualCalcCASKO extends Page
                             Grid::make([
                                 Column::make([
                                     Block::make([
-                                        Text::make('Коэффициент', 'coefficient')->hint('Коэффициент Страхование имущества для Физ. лиц')->default($coefficient),
+                                        Text::make('Коэффициент', 'coefficient')->hint('Коэффициент Страхование имущества для Физ. лиц')->default((isset($coefficient))? $coefficient : '' ),
                                     ])
 
 

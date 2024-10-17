@@ -38,6 +38,8 @@ class CatalogIndividualController extends Controller
             ->orderBy('sorting')
             ->get();
 
+
+
         return view('pages.leader.individual.page', [
             'items' => $items,
             'item' => $item

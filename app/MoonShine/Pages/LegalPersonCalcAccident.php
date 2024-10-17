@@ -7,6 +7,7 @@ namespace App\MoonShine\Pages;
 use App\Models\CatalogPersonLegalSetting;
 use App\Models\City;
 use App\Models\Company;
+use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\FormBuilder;
 use MoonShine\Decorations\Block;
 use MoonShine\Decorations\Column;
@@ -65,11 +66,31 @@ class LegalPersonCalcAccident extends Page
 
     }
 
+
+    public function setting()
+    {
+
+        if (Storage::disk('config')->exists('moonshine/legal_person/legal_personCalcAccident.php')) {
+            $result = include(storage_path('app/public/config/moonshine/legal_person/legal_personCalcAccident.php'));
+        } else {
+            $result = null;
+        }
+
+        return (is_array($result)) ? $result : null;
+
+    }
+
+
+
     /**
      * @return list<MoonShineComponent>
      */
     public function components(): array
     {
+
+        if(!is_null($this->setting())) {
+            extract($this->setting());
+        }
 
 
         $title = (config('moonshine.legal_person.legal_personCalcAccident.title')) ?: '';
@@ -113,7 +134,7 @@ class LegalPersonCalcAccident extends Page
 
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_risk),
+                                            ->removable()->default((isset($json_risk))? $json_risk : ''),
 
                                     ]),
                                 ])->columnSpan(12),
@@ -136,7 +157,7 @@ class LegalPersonCalcAccident extends Page
                                             Text::make('', 'json_moreoptions_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default($json_moreoptions),
+                                            ->removable()->default((isset($json_moreoptions))? $json_moreoptions : '' ),
 
 
                                     ]),
@@ -161,7 +182,7 @@ class LegalPersonCalcAccident extends Page
                                             Text::make('', 'json_company_text')->hint('Коэффициент'),
 
                                         ])->vertical()->creatable(limit: 30)
-                                            ->removable()->default($json_company),
+                                            ->removable()->default((isset($json_company))? $json_company : '' ),
 
 
                                     ]),

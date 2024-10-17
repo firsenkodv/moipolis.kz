@@ -53,6 +53,13 @@ export function check_() {
         $('.g_type').removeClass('active');
         $('.'+Tp).addClass('active');
 
+        $('.___carusel_wrap').each(function( index ) {
+                $(this).toggleClass('active')
+        });
+
+
+
+
     });
 
 }

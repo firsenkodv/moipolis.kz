@@ -15,16 +15,16 @@
                             Связь с нами в один клик
                         </div>
                         <div class="f_contact__phone">
-                            <a href="tel:{{ config('moonshine.setting.phone1') }}">{{ config('moonshine.setting.phone1') }}</a>
+                            <a href="tel:{{ config2('moonshine.setting.phone1') }}">{{ config2('moonshine.setting.phone1') }}</a>
                         </div>
                         <div class="f_contact__label_address">
                             Фактический адрес
                         </div>
 
                         <div class="f_contact__address">
-                            <div>{{ config('moonshine.setting.contact_name_company') }}</div>
-                            <div>{{ config('moonshine.setting.contact_republic') }}</div>
-                            <div>{{ config('moonshine.setting.contact_address') }}</div>
+                            <div>{{ config2('moonshine.setting.contact_name_company') }}</div>
+                            <div>{{ config2('moonshine.setting.contact_republic') }}</div>
+                            <div>{{ config2('moonshine.setting.contact_address') }}</div>
                         </div>
                     </div>
 
@@ -89,11 +89,11 @@
                             Мы в социальных сетях
                         </div>
                         <div class="top_socialBig">
-                            <a class="s-faceboock" target="_blank" href="{{ config('moonshine.setting.facebook') }}"></a>
-                            <a class="s-youtube" target="_blank" href="{{ config('moonshine.setting.youtube') }}"></a>
-                            <a class="s-instagram" target="_blank" href="{{ config('moonshine.setting.instagram') }}"></a>
-                            <a class="s-whatsapp" target="_blank" href="{{ config('moonshine.setting.whatsapp') }}"></a>
-                            <a class="s-telegram" target="_blank" href="{{ config('moonshine.setting.telegram') }}"></a>
+                            <a class="s-faceboock" target="_blank" href="{{ config2('moonshine.setting.facebook') }}"></a>
+                            <a class="s-youtube" target="_blank" href="{{ config2('moonshine.setting.youtube') }}"></a>
+                            <a class="s-instagram" target="_blank" href="{{ config2('moonshine.setting.instagram') }}"></a>
+                            <a class="s-whatsapp" target="_blank" href="{{ config2('moonshine.setting.whatsapp') }}"></a>
+                            <a class="s-telegram" target="_blank" href="{{ config2('moonshine.setting.telegram') }}"></a>
                         </div>
 
                     </div>
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="f_flexbottom">
-            <div class="copyright">© 1993 - {{ date("Y") }} {{ config('moonshine.setting.contact_copy') }}</div>
+            <div class="copyright">© 1993 - {{ date("Y") }} {{ config2('moonshine.setting.contact_copy') }}</div>
             <div class="sign_the_contract">
                 <a href="/contacts">Контакты для связи</a>
             </div>

@@ -15,6 +15,10 @@
 
 
         <section class="home_benefit pad_t26 ">
+            @include('modules.module_0')
+         </section>
+
+        <section class="home_benefit pad_t26 ">
             @include('modules.module_1')
          </section>
 
