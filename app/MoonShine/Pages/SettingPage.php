@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace App\MoonShine\Pages;
 
 
-use App\MoonShine\Fields\BusinessCard;
-use App\MoonShine\Fields\ItemAmount;
 use Illuminate\Support\Facades\Storage;
 use MoonShine\Components\Card;
 use MoonShine\Components\FormBuilder;

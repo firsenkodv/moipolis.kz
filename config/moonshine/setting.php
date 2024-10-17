@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  '_token' => 'EsBjrP47t1sO8Pt02XmZgqE0RVsPHpblZmsMIaSA',
+/*  '_token' => 'EsBjrP47t1sO8Pt02XmZgqE0RVsPHpblZmsMIaSA',
   'slogan1' => 'центр страхования',
   'slogan2' => 'Центр Страхования "General Re"',
   'footer_title' => NULL,
@@ -17,5 +17,5 @@ return array (
   'contact_copy' => 'Центр Страхования "General Re"',
   'phone1' => '+7 (727) 225 40-40',
   'phone2' => 'не используется',
-  'email' => 'info@generalre.kz',
+  'email' => 'info@generalre.kz',*/
 );
